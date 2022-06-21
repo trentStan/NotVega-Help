@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Event: Identifiable{
-    var id: ObjectIdentifier
+struct Event {
+    var id: String
     var title: String
     var dateTime: Date
     var location: String

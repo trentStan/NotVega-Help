@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 
-struct User: Identifiable, Contactable {
+struct User: Contactable {
     
-    var id: ObjectIdentifier
+    var id: String
     var name: String
     var surname: String
     var phoneNum: String
