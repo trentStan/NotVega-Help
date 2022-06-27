@@ -7,11 +7,12 @@
 
 import Foundation
 
-struct Event {
+struct Event: CustomStringConvertible{
     var id: String
+    var club: String?
     var title: String
     var dateTime: Date
     var location: String
-    var descript: String
+    var description: String
     
 }

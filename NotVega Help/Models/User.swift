@@ -9,13 +9,13 @@ import Foundation
 import UIKit
 
 
-struct User: Contactable {
+struct User: Contactable, Codable {
     
     var id: String
     var name: String
     var surname: String
     var phoneNum: String
     var email: String
-    var events: [Event]
+    var eventIDs: [String]
     
 }

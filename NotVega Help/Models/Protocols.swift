@@ -7,7 +7,12 @@
 
 import Foundation
 
-protocol Contactable{
+protocol Namable {
+    
+    var name: String { get }
+}
+
+protocol Contactable: Namable{
     var email: String { get  }
     var phoneNum: String { get }
 }

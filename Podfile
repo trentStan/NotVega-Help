@@ -8,4 +8,5 @@ target 'NotVega Help' do
   # Pods for NotVega Help
 pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
+pod 'ReachabilitySwift'
 end

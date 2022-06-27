@@ -7,10 +7,11 @@
 
 import Foundation
 
-struct Clubs {
+struct Club: Contactable, CustomStringConvertible, Codable{
+    
     var name: String
-    var descript: String
+    var description: String
     var email: String
     var phoneNum: String
-    var events: [Event]
+    var eventIDs: [String]
 }
