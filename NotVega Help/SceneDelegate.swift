@@ -78,7 +78,8 @@ extension SceneDelegate {
         
         if let loggedEmail = Auth.auth().currentUser?.email{
             if loggedEmail == defaultEmail {
-               let initialViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Main")
+                let initialViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Main") as! ViewController
+                initialViewController.window = window
                 window?.rootViewController = initialViewController
             } else {
                 let initialViewController = UIStoryboard(name: "LogIn", bundle: nil).instantiateViewController(withIdentifier: "Login") as! LogIn
