@@ -21,13 +21,22 @@ class LogIn: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(UserDefaults.standard.string(forKey: "Email"))
+       
+        do {
+            try Auth.auth().signOut()
+            UserDefaults.standard.setValue(nil, forKey: "Email")
+            UserDefaults.standard.setValue(nil, forKey: "ID")
+        }
+        catch{
+            print("already signed out")
+            
+        }
         print("login loaded")
         errLabel.alpha = 0
         // Do any additional setup after loading the view.
     }
     
-    private func checkAuth(enteredID: String, psw: String) -> Bool {
+    private func checkAuth(enteredID: String, psw: String) {
         let users = db.collection("Users")
         let user = users.document(enteredID)
         
@@ -38,7 +47,7 @@ class LogIn: UIViewController {
                 print(error.localizedDescription)
                 
             }
-           
+            
             if let snap = snap, snap.exists , let email = snap.data()!["email"] as? String {
                 print("Email Retrieved: " + email)
                 Auth.auth().signIn(withEmail: email, password: psw) { (result, error) in
@@ -47,8 +56,9 @@ class LogIn: UIViewController {
                         self.showErr(description: "Incorrect Password")
                     } else {
                         UserDefaults.standard.set(result?.user.email, forKey: "Email")
+                        UserDefaults.standard.set(enteredID, forKey: "ID")
                         UserDefaults.standard.synchronize()
-                       
+                        
                         let initialViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Main") as! ViewController
                         initialViewController.window = self.window
                         self.window?.rootViewController = initialViewController
@@ -65,7 +75,7 @@ class LogIn: UIViewController {
             
         }
         
-        return false
+       
     }
     
     func showErr(description: String){
@@ -79,7 +89,7 @@ class LogIn: UIViewController {
     }
     
     @IBAction func logIn(_ sender: Any) {
-        var success: Bool
+        
         guard let enteredID = ID.text else {
             print("Enter ID")
             showErr(description: "Enter ID")
@@ -88,7 +98,7 @@ class LogIn: UIViewController {
         
         if let psw = Password.text {
             
-            success = checkAuth(enteredID: enteredID, psw: psw)
+        checkAuth(enteredID: enteredID, psw: psw)
         } else {
             showErr(description: "Enter Password")
             print("Enter Password")

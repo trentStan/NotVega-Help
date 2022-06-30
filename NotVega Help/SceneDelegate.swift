@@ -7,8 +7,8 @@
 
 import UIKit
 import FirebaseAuth
-import FirebaseCore
 import Reachability
+import FirebaseFirestore
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
@@ -56,8 +56,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 }
 extension SceneDelegate {
     func configureInitialRootViewController(for window: UIWindow?) {
-        let defaultEmail = UserDefaults.standard.string(forKey: "Email")
-        
         
         let reachability = try! Reachability()
         switch reachability.connection {
@@ -76,9 +74,11 @@ extension SceneDelegate {
             
         }
         
-        if let loggedEmail = Auth.auth().currentUser?.email{
+        if let loggedEmail = Auth.auth().currentUser?.email, let defaultEmail = UserDefaults.standard.string(forKey: "Email"), let id = UserDefaults.standard.string(forKey: "ID"){
+           print(loggedEmail)
             if loggedEmail == defaultEmail {
                 let initialViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Main") as! ViewController
+                
                 initialViewController.window = window
                 window?.rootViewController = initialViewController
             } else {

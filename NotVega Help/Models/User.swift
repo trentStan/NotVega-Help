@@ -18,4 +18,22 @@ struct User: Contactable, Codable {
     var email: String
     var eventIDs: [String]
     
+    init(dic: [String: Any]) throws {
+        self = try JSONDecoder().decode(User.self, from: JSONSerialization.data(withJSONObject: dic))
+    }
+}
+func getUserDefaults() -> User? {
+    var user: User?
+    if let json =  UserDefaults.standard.object(forKey: "UserDetails") as? Data{
+        
+        do{
+            
+            user = try JSONDecoder().decode(User.self, from: json)
+        } catch {
+            print("Decoding user default failed")
+        }
+    } else {
+        print("Decoding user default failed")
+    }
+    return user
 }
