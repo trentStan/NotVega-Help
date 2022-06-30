@@ -31,6 +31,7 @@ class ViewController: UIViewController {
             try Auth.auth().signOut()
             UserDefaults.standard.setValue(nil, forKey: "Email")
             UserDefaults.standard.setValue(nil, forKey: "ID")
+            UserDefaults.standard.set(nil, forKey: "UserDetails")
         }
         catch{
             print("Cant Sign out")
