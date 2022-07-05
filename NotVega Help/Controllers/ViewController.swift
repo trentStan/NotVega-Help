@@ -8,7 +8,6 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseAuth
-import Reachability
 
 class ViewController: UIViewController {
     
