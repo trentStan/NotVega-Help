@@ -59,7 +59,7 @@ class LogIn: UIViewController {
                         UserDefaults.standard.set(enteredID, forKey: "ID")
                         UserDefaults.standard.synchronize()
                         
-                        let initialViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Main") as! ViewController
+                        let initialViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Main") as! Main
                         initialViewController.window = self.window
                         self.window?.rootViewController = initialViewController
                         self.window?.makeKeyAndVisible()
