@@ -16,7 +16,7 @@
 		1F55D1812861E516009A870D /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F55D1802861E516009A870D /* Protocols.swift */; };
 		1F574B1728608C6600E59550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F574B1628608C6600E59550 /* AppDelegate.swift */; };
 		1F574B1928608C6600E59550 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F574B1828608C6600E59550 /* SceneDelegate.swift */; };
-		1F574B1B28608C6600E59550 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F574B1A28608C6600E59550 /* ViewController.swift */; };
+		1F574B1B28608C6600E59550 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F574B1A28608C6600E59550 /* Main.swift */; };
 		1F574B2028608C6700E59550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F574B1F28608C6700E59550 /* Assets.xcassets */; };
 		1F574B2328608C6700E59550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F574B2128608C6700E59550 /* LaunchScreen.storyboard */; };
 		1F574B2B28608F4500E59550 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F574B2A28608F4500E59550 /* GoogleService-Info.plist */; };
@@ -36,7 +36,7 @@
 		1F574B1328608C6600E59550 /* NotVega Help.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NotVega Help.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F574B1628608C6600E59550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F574B1828608C6600E59550 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1F574B1A28608C6600E59550 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1F574B1A28608C6600E59550 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		1F574B1F28608C6700E59550 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F574B2228608C6700E59550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F574B2428608C6700E59550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		1F55D1822861E5D6009A870D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1F574B1A28608C6600E59550 /* ViewController.swift */,
+				1F574B1A28608C6600E59550 /* Main.swift */,
 				1F133BE22861F687002D587A /* LogIn.swift */,
 				1FA2FFEB2864743C003A49C0 /* NoInternet.swift */,
 			);
@@ -264,7 +264,7 @@
 				1F55D17B2861E27F009A870D /* User.swift in Sources */,
 				1F55D17F2861E3CC009A870D /* Club.swift in Sources */,
 				1F55D1812861E516009A870D /* Protocols.swift in Sources */,
-				1F574B1B28608C6600E59550 /* ViewController.swift in Sources */,
+				1F574B1B28608C6600E59550 /* Main.swift in Sources */,
 				1F574B1728608C6600E59550 /* AppDelegate.swift in Sources */,
 				1F574B1928608C6600E59550 /* SceneDelegate.swift in Sources */,
 				1F55D17D2861E308009A870D /* Event.swift in Sources */,

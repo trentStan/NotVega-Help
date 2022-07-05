@@ -9,7 +9,7 @@ import UIKit
 import FirebaseFirestore
 import FirebaseAuth
 
-class ViewController: UIViewController {
+class Main: UIViewController {
     
     var window: UIWindow?
     private let db = Firestore.firestore()
