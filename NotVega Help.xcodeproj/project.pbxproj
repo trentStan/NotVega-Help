@@ -23,6 +23,7 @@
 		1FA2FFEA28647415003A49C0 /* NoInternet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA2FFE928647415003A49C0 /* NoInternet.storyboard */; };
 		1FA2FFEC2864743C003A49C0 /* NoInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA2FFEB2864743C003A49C0 /* NoInternet.swift */; };
 		97D0E4239CD705AAA5B7AC68 /* Pods_NotVega_Help.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E35F28F1110CCF68B61A5AA /* Pods_NotVega_Help.framework */; };
+		DE779E682875B7F800E4A90E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE779E672875B7F800E4A90E /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		3008460DFFCBEFD2073A35E3 /* Pods-NotVega Help.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotVega Help.debug.xcconfig"; path = "Target Support Files/Pods-NotVega Help/Pods-NotVega Help.debug.xcconfig"; sourceTree = "<group>"; };
 		3E35F28F1110CCF68B61A5AA /* Pods_NotVega_Help.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotVega_Help.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E9E9235E316A8B52BC667AB /* Pods-NotVega Help.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotVega Help.release.xcconfig"; path = "Target Support Files/Pods-NotVega Help/Pods-NotVega Help.release.xcconfig"; sourceTree = "<group>"; };
+		DE779E672875B7F800E4A90E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				1F55D1822861E5D6009A870D /* Controllers */,
 				1F55D1832861E5E6009A870D /* Views */,
 				1F574B1F28608C6700E59550 /* Assets.xcassets */,
+				DE779E672875B7F800E4A90E /* Images.xcassets */,
 				1F574B2128608C6700E59550 /* LaunchScreen.storyboard */,
 				1F574B2428608C6700E59550 /* Info.plist */,
 				1F574B2A28608F4500E59550 /* GoogleService-Info.plist */,
@@ -204,6 +207,7 @@
 			files = (
 				1F574B2328608C6700E59550 /* LaunchScreen.storyboard in Resources */,
 				1F574B2028608C6700E59550 /* Assets.xcassets in Resources */,
+				DE779E682875B7F800E4A90E /* Images.xcassets in Resources */,
 				1FA2FFEA28647415003A49C0 /* NoInternet.storyboard in Resources */,
 				1F133BE92861FF01002D587A /* Main.storyboard in Resources */,
 				1F574B2B28608F4500E59550 /* GoogleService-Info.plist in Resources */,
