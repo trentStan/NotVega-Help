@@ -10,6 +10,9 @@ import Foundation
 struct Club: Contactable, CustomStringConvertible, Codable{
     
     var name: String
+    var intro: String
+    var day: String
+    var time: String
     var description: String
     var email: String
     var phoneNum: String
