@@ -11,6 +11,16 @@ import FirebaseAuth
 
 class Main: UIViewController {
     
+    @IBOutlet var weeklyScheduleBtn: UIButton!
+    @IBOutlet var calendarBtn: UIButton!
+    @IBOutlet var mapBtn: UIButton!
+    @IBOutlet var clubBtn: UIButton!
+    @IBOutlet var numbersText: UITextView!
+    
+    //values for UI
+    let spacing: CGFloat = 15.0
+    let imageSpacing: CGFloat = 20.0
+    
     var window: UIWindow?
     private let db = Firestore.firestore()
     
@@ -19,6 +29,29 @@ class Main: UIViewController {
         
         print("Main")
         addDefaults()
+        
+        //UI
+        weeklyScheduleBtn.setTitle("weekly  \nschedule    ", for: .normal)
+        weeklyScheduleBtn.configuration?.titlePadding = spacing
+        weeklyScheduleBtn.configuration?.contentInsets = NSDirectionalEdgeInsets(top: spacing, leading: spacing, bottom: spacing, trailing: spacing)
+        weeklyScheduleBtn.titleLabel?.font = weeklyScheduleBtn.titleLabel!.font.withSize(30)
+        
+        
+        calendarBtn.setTitle("year\ncalendar", for: .normal)
+        calendarBtn.configuration?.titlePadding = spacing
+        calendarBtn.configuration?.contentInsets = NSDirectionalEdgeInsets(top: spacing, leading: spacing, bottom: spacing, trailing: spacing)
+        
+        mapBtn.setTitle("campus\nmap", for: .normal)
+        mapBtn.configuration?.titlePadding = spacing
+        mapBtn.configuration?.contentInsets = NSDirectionalEdgeInsets(top: spacing, leading: spacing, bottom: spacing, trailing: spacing)
+        
+        clubBtn.setTitle("clubs", for: .normal)
+        clubBtn.configuration?.titlePadding = spacing
+        clubBtn.configuration?.contentInsets = NSDirectionalEdgeInsets(top: spacing, leading: spacing, bottom: spacing, trailing: spacing)
+        
+        numbersText.text = "+27 11 000 1234 \n+27 11 123 0000"
+        numbersText.contentInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
+        //
         
     }
     
