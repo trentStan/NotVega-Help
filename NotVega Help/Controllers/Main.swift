@@ -24,12 +24,16 @@ class Main: UIViewController {
     var window: UIWindow?
     private let db = Firestore.firestore()
     
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         print("Main")
-        addDefaults()
         
+    }
+    
+    func UIBuild(){
         //UI
         weeklyScheduleBtn.setTitle("weekly  \nschedule    ", for: .normal)
         weeklyScheduleBtn.configuration?.titlePadding = spacing
@@ -52,9 +56,13 @@ class Main: UIViewController {
         numbersText.text = "+27 11 000 1234 \n+27 11 123 0000"
         numbersText.contentInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
         //
-        
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GoToClubs"{
+            
+        }
+    }
     @IBAction func signOut(_ sender: Any) {
         
         let newScene = SceneDelegate()
@@ -107,6 +115,7 @@ class Main: UIViewController {
                 
             }
             print("Welcome \(getUserDefaults()?.name ?? "Unknown")")
+            self.UIBuild()
         }
         
     } // function addDefault
