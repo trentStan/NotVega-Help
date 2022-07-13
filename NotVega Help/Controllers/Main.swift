@@ -11,11 +11,13 @@ import FirebaseAuth
 
 class Main: UIViewController {
     
+    
     @IBOutlet var weeklyScheduleBtn: UIButton!
-    @IBOutlet var calendarBtn: UIButton!
+    @IBOutlet var yearCalendarBtn: UIButton!
     @IBOutlet var mapBtn: UIButton!
     @IBOutlet var clubBtn: UIButton!
     @IBOutlet var numbersText: UITextView!
+    
     
     //values for UI
     let spacing: CGFloat = 15.0
@@ -35,15 +37,15 @@ class Main: UIViewController {
     
     func UIBuild(){
         //UI
-        weeklyScheduleBtn.setTitle("weekly  \nschedule    ", for: .normal)
+        weeklyScheduleBtn.setTitle("weekly\nschedule", for: .normal)
         weeklyScheduleBtn.configuration?.titlePadding = spacing
         weeklyScheduleBtn.configuration?.contentInsets = NSDirectionalEdgeInsets(top: spacing, leading: spacing, bottom: spacing, trailing: spacing)
         weeklyScheduleBtn.titleLabel?.font = weeklyScheduleBtn.titleLabel!.font.withSize(30)
         
         
-        calendarBtn.setTitle("year\ncalendar", for: .normal)
-        calendarBtn.configuration?.titlePadding = spacing
-        calendarBtn.configuration?.contentInsets = NSDirectionalEdgeInsets(top: spacing, leading: spacing, bottom: spacing, trailing: spacing)
+        yearCalendarBtn.setTitle("year\ncalendar", for: .normal)
+        yearCalendarBtn.configuration?.titlePadding = spacing
+        yearCalendarBtn.configuration?.contentInsets = NSDirectionalEdgeInsets(top: spacing, leading: spacing, bottom: spacing, trailing: spacing)
         
         mapBtn.setTitle("campus\nmap", for: .normal)
         mapBtn.configuration?.titlePadding = spacing
