@@ -60,7 +60,27 @@ class Main: UIViewController {
         
         numbersText.text = "+27 11 000 1234 \n+27 11 123 0000"
         numbersText.contentInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
-        //
+        
+        //Shadows
+        weeklyScheduleBtn.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4).cgColor
+        weeklyScheduleBtn.layer.shadowOffset = CGSize(width: 10.0, height: 10.0)
+        weeklyScheduleBtn.layer.shadowOpacity = 0.2
+        weeklyScheduleBtn.layer.shadowRadius = 1.0
+        
+        yearCalendarBtn.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4).cgColor
+        yearCalendarBtn.layer.shadowOffset = CGSize(width: 10.0, height: 10.0)
+        yearCalendarBtn.layer.shadowOpacity = 0.2
+        yearCalendarBtn.layer.shadowRadius = 1.0
+        
+        mapBtn.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4).cgColor
+        mapBtn.layer.shadowOffset = CGSize(width: 10.0, height: 10.0)
+        mapBtn.layer.shadowOpacity = 0.2
+        mapBtn.layer.shadowRadius = 1.0
+        
+        clubBtn.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4).cgColor
+        clubBtn.layer.shadowOffset = CGSize(width: 10.0, height: 10.0)
+        clubBtn.layer.shadowOpacity = 0.2
+        clubBtn.layer.shadowRadius = 1.0
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -120,7 +140,7 @@ class Main: UIViewController {
                 
             }
             print("Welcome \(getUserDefaults()?.name ?? "Unknown")")
-            //self.UIBuild()
+            self.UIBuild()
             self.introText.text = "Welcome, \(getUserDefaults()?.name ?? "student")"
         }
         

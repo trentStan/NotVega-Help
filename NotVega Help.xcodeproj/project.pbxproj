@@ -28,6 +28,9 @@
 		912E9675287C66B100FAF7DE /* ClubDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9674287C66B100FAF7DE /* ClubDetailViewController.swift */; };
 		97D0E4239CD705AAA5B7AC68 /* Pods_NotVega_Help.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E35F28F1110CCF68B61A5AA /* Pods_NotVega_Help.framework */; };
 		DE779E682875B7F800E4A90E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE779E672875B7F800E4A90E /* Images.xcassets */; };
+		DE779E70287F274F00E4A90E /* WeeklySchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE779E6F287F274F00E4A90E /* WeeklySchedule.swift */; };
+		DE779E72287F2DDF00E4A90E /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE779E71287F2DDF00E4A90E /* CalendarViewController.swift */; };
+		DE779E74287F2E4000E4A90E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE779E73287F2E4000E4A90E /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,9 @@
 		912E9672287C550000FAF7DE /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
 		912E9674287C66B100FAF7DE /* ClubDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubDetailViewController.swift; sourceTree = "<group>"; };
 		DE779E672875B7F800E4A90E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DE779E6F287F274F00E4A90E /* WeeklySchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklySchedule.swift; sourceTree = "<group>"; };
+		DE779E71287F2DDF00E4A90E /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		DE779E73287F2E4000E4A90E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = "NotVega Help/Views/MapViewController.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,9 @@
 		1F55D1822861E5D6009A870D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DE779E73287F2E4000E4A90E /* MapViewController.swift */,
+				DE779E71287F2DDF00E4A90E /* CalendarViewController.swift */,
+				DE779E6F287F274F00E4A90E /* WeeklySchedule.swift */,
 				1F574B1A28608C6600E59550 /* Main.swift */,
 				1F133BE22861F687002D587A /* LogIn.swift */,
 				1FA2FFEB2864743C003A49C0 /* NoInternet.swift */,
@@ -107,6 +116,7 @@
 				1F133BE62861F6D0002D587A /* LogIn.storyboard */,
 				1F133BE82861FF01002D587A /* Main.storyboard */,
 				1FA2FFE928647415003A49C0 /* NoInternet.storyboard */,
+				1F574B2128608C6700E59550 /* LaunchScreen.storyboard */,
 				912E966E287C523C00FAF7DE /* ClubTableViewCell.swift */,
 				912E966F287C523C00FAF7DE /* ClubTableViewCell.xib */,
 			);
@@ -141,7 +151,6 @@
 				1F55D1832861E5E6009A870D /* Views */,
 				1F574B1F28608C6700E59550 /* Assets.xcassets */,
 				DE779E672875B7F800E4A90E /* Images.xcassets */,
-				1F574B2128608C6700E59550 /* LaunchScreen.storyboard */,
 				1F574B2428608C6700E59550 /* Info.plist */,
 				1F574B2A28608F4500E59550 /* GoogleService-Info.plist */,
 			);
@@ -282,12 +291,15 @@
 				1F55D17B2861E27F009A870D /* User.swift in Sources */,
 				1F55D17F2861E3CC009A870D /* Club.swift in Sources */,
 				912E9670287C523C00FAF7DE /* ClubTableViewCell.swift in Sources */,
+				DE779E70287F274F00E4A90E /* WeeklySchedule.swift in Sources */,
 				912E9673287C550000FAF7DE /* ClubViewController.swift in Sources */,
 				1F55D1812861E516009A870D /* Protocols.swift in Sources */,
 				1F574B1B28608C6600E59550 /* Main.swift in Sources */,
 				1F574B1728608C6600E59550 /* AppDelegate.swift in Sources */,
 				1F574B1928608C6600E59550 /* SceneDelegate.swift in Sources */,
 				1F55D17D2861E308009A870D /* Event.swift in Sources */,
+				DE779E72287F2DDF00E4A90E /* CalendarViewController.swift in Sources */,
+				DE779E74287F2E4000E4A90E /* MapViewController.swift in Sources */,
 				1F133BE32861F687002D587A /* LogIn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
