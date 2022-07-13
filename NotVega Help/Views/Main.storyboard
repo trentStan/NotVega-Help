@@ -157,6 +157,7 @@
                     <navigationItem key="navigationItem" id="jE5-yf-77f"/>
                     <connections>
                         <outlet property="clubBtn" destination="0zL-CY-pyJ" id="4na-HM-Oft"/>
+                        <outlet property="introText" destination="zCE-hg-y8Z" id="Kaf-nt-jvK"/>
                         <outlet property="mapBtn" destination="dXM-yB-c4T" id="XFG-Xt-3ci"/>
                         <outlet property="numbersText" destination="6wT-BC-8iS" id="Oco-2w-WmB"/>
                         <outlet property="weeklyScheduleBtn" destination="aC6-Cq-BmY" id="dVg-2S-jpP"/>

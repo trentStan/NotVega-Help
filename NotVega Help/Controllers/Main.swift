@@ -12,6 +12,7 @@ import FirebaseAuth
 class Main: UIViewController {
     
     
+    @IBOutlet var introText: UILabel!
     @IBOutlet var weeklyScheduleBtn: UIButton!
     @IBOutlet var yearCalendarBtn: UIButton!
     @IBOutlet var mapBtn: UIButton!
@@ -32,11 +33,13 @@ class Main: UIViewController {
         super.viewDidLoad()
         
         print("Main")
-        
+        addDefaults()
     }
     
     func UIBuild(){
         //UI
+        introText.text = "Welcome, \(getUserDefaults()?.name ?? "student")"
+        
         weeklyScheduleBtn.setTitle("weekly\nschedule", for: .normal)
         weeklyScheduleBtn.configuration?.titlePadding = spacing
         weeklyScheduleBtn.configuration?.contentInsets = NSDirectionalEdgeInsets(top: spacing, leading: spacing, bottom: spacing, trailing: spacing)
@@ -117,7 +120,8 @@ class Main: UIViewController {
                 
             }
             print("Welcome \(getUserDefaults()?.name ?? "Unknown")")
-            self.UIBuild()
+            //self.UIBuild()
+            self.introText.text = "Welcome, \(getUserDefaults()?.name ?? "student")"
         }
         
     } // function addDefault
