@@ -26,6 +26,10 @@
 		912E9671287C523C00FAF7DE /* ClubTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 912E966F287C523C00FAF7DE /* ClubTableViewCell.xib */; };
 		912E9673287C550000FAF7DE /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9672287C550000FAF7DE /* ClubViewController.swift */; };
 		912E9675287C66B100FAF7DE /* ClubDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9674287C66B100FAF7DE /* ClubDetailViewController.swift */; };
+		9159E4DB287EF28300CFACCA /* GroupChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159E4DA287EF28300CFACCA /* GroupChatViewController.swift */; };
+		9159E4DE287EF53200CFACCA /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159E4DC287EF53200CFACCA /* ChatTableViewCell.swift */; };
+		9159E4DF287EF53200CFACCA /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9159E4DD287EF53200CFACCA /* ChatTableViewCell.xib */; };
+		9159E4E1287EF75D00CFACCA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159E4E0287EF75D00CFACCA /* Message.swift */; };
 		97D0E4239CD705AAA5B7AC68 /* Pods_NotVega_Help.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E35F28F1110CCF68B61A5AA /* Pods_NotVega_Help.framework */; };
 		DE779E682875B7F800E4A90E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE779E672875B7F800E4A90E /* Images.xcassets */; };
 /* End PBXBuildFile section */
@@ -55,6 +59,10 @@
 		912E966F287C523C00FAF7DE /* ClubTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClubTableViewCell.xib; sourceTree = "<group>"; };
 		912E9672287C550000FAF7DE /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
 		912E9674287C66B100FAF7DE /* ClubDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubDetailViewController.swift; sourceTree = "<group>"; };
+		9159E4DA287EF28300CFACCA /* GroupChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatViewController.swift; sourceTree = "<group>"; };
+		9159E4DC287EF53200CFACCA /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		9159E4DD287EF53200CFACCA /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
+		9159E4E0287EF75D00CFACCA /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		DE779E672875B7F800E4A90E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +93,7 @@
 				1F55D17C2861E308009A870D /* Event.swift */,
 				1F55D17E2861E3CC009A870D /* Club.swift */,
 				1F55D1802861E516009A870D /* Protocols.swift */,
+				9159E4E0287EF75D00CFACCA /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -97,6 +106,8 @@
 				1FA2FFEB2864743C003A49C0 /* NoInternet.swift */,
 				912E9672287C550000FAF7DE /* ClubViewController.swift */,
 				912E9674287C66B100FAF7DE /* ClubDetailViewController.swift */,
+				912E966E287C523C00FAF7DE /* ClubTableViewCell.swift */,
+				9159E4DA287EF28300CFACCA /* GroupChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -107,8 +118,9 @@
 				1F133BE62861F6D0002D587A /* LogIn.storyboard */,
 				1F133BE82861FF01002D587A /* Main.storyboard */,
 				1FA2FFE928647415003A49C0 /* NoInternet.storyboard */,
-				912E966E287C523C00FAF7DE /* ClubTableViewCell.swift */,
 				912E966F287C523C00FAF7DE /* ClubTableViewCell.xib */,
+				9159E4DC287EF53200CFACCA /* ChatTableViewCell.swift */,
+				9159E4DD287EF53200CFACCA /* ChatTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F574B2328608C6700E59550 /* LaunchScreen.storyboard in Resources */,
+				9159E4DF287EF53200CFACCA /* ChatTableViewCell.xib in Resources */,
 				1F574B2028608C6700E59550 /* Assets.xcassets in Resources */,
 				DE779E682875B7F800E4A90E /* Images.xcassets in Resources */,
 				1FA2FFEA28647415003A49C0 /* NoInternet.storyboard in Resources */,
@@ -283,10 +296,13 @@
 				1F55D17F2861E3CC009A870D /* Club.swift in Sources */,
 				912E9670287C523C00FAF7DE /* ClubTableViewCell.swift in Sources */,
 				912E9673287C550000FAF7DE /* ClubViewController.swift in Sources */,
+				9159E4DB287EF28300CFACCA /* GroupChatViewController.swift in Sources */,
 				1F55D1812861E516009A870D /* Protocols.swift in Sources */,
 				1F574B1B28608C6600E59550 /* Main.swift in Sources */,
 				1F574B1728608C6600E59550 /* AppDelegate.swift in Sources */,
 				1F574B1928608C6600E59550 /* SceneDelegate.swift in Sources */,
+				9159E4DE287EF53200CFACCA /* ChatTableViewCell.swift in Sources */,
+				9159E4E1287EF75D00CFACCA /* Message.swift in Sources */,
 				1F55D17D2861E308009A870D /* Event.swift in Sources */,
 				1F133BE32861F687002D587A /* LogIn.swift in Sources */,
 			);
