@@ -31,6 +31,8 @@ class Main: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let parent = parent as! Navig
+        window = parent.window
         
         print("Main")
         addDefaults()
@@ -83,11 +85,7 @@ class Main: UIViewController {
         clubBtn.layer.shadowRadius = 1.0
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "GoToClubs"{
-            
-        }
-    }
+   
     @IBAction func signOut(_ sender: Any) {
         
         let newScene = SceneDelegate()
@@ -104,6 +102,20 @@ class Main: UIViewController {
         }
         newScene.configureInitialRootViewController(for: window)
         
+    }
+    
+    
+    @IBAction func goToWeekSched(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let weekSched = storyboard.instantiateViewController(withIdentifier: "WeeklySchedule") as? WeeklySchedule else {
+            print("This means you haven't set your view controller identifier properly.")
+            return
+        }
+        guard let navigationController = navigationController else {
+            print("This means you current view controller doesn't have a navigation controller")
+            return
+        }
+        navigationController.pushViewController(weekSched, animated: true)
     }
     
     func addDefaults() {
