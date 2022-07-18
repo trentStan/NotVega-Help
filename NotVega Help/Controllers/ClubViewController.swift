@@ -91,7 +91,7 @@ extension ClubViewController: UITableViewDelegate {
                 self.cEmail = self.clubInformation[indexPath.row].email
                 self.cPhoneNum = self.clubInformation[indexPath.row].phoneNum
                 self.performSegue(withIdentifier: "ClubDetails", sender: self)
-                self.navigationController?.pushViewController(vc, animated: true)
+                
             }
         }
     }// didSelectRowAt function
