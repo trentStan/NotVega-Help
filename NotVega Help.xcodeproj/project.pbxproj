@@ -34,7 +34,6 @@
 		9159E4DF287EF53200CFACCA /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9159E4DD287EF53200CFACCA /* ChatTableViewCell.xib */; };
 		9159E4E1287EF75D00CFACCA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159E4E0287EF75D00CFACCA /* Message.swift */; };
 		97D0E4239CD705AAA5B7AC68 /* Pods_NotVega_Help.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E35F28F1110CCF68B61A5AA /* Pods_NotVega_Help.framework */; };
-		DE779E682875B7F800E4A90E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE779E672875B7F800E4A90E /* Images.xcassets */; };
 		DE779E70287F274F00E4A90E /* WeeklySchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE779E6F287F274F00E4A90E /* WeeklySchedule.swift */; };
 		DE779E72287F2DDF00E4A90E /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE779E71287F2DDF00E4A90E /* CalendarViewController.swift */; };
 		DE779E74287F2E4000E4A90E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE779E73287F2E4000E4A90E /* MapViewController.swift */; };
@@ -72,7 +71,6 @@
 		9159E4DA287EF28300CFACCA /* GroupChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatViewController.swift; sourceTree = "<group>"; };
 		9159E4DD287EF53200CFACCA /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 		9159E4E0287EF75D00CFACCA /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		DE779E672875B7F800E4A90E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DE779E6F287F274F00E4A90E /* WeeklySchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklySchedule.swift; sourceTree = "<group>"; };
 		DE779E71287F2DDF00E4A90E /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		DE779E73287F2E4000E4A90E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = "NotVega Help/Views/MapViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -171,7 +169,6 @@
 				1F55D1822861E5D6009A870D /* Controllers */,
 				1F55D1832861E5E6009A870D /* Views */,
 				1F574B1F28608C6700E59550 /* Assets.xcassets */,
-				DE779E672875B7F800E4A90E /* Images.xcassets */,
 				1F574B2428608C6700E59550 /* Info.plist */,
 				1F574B2A28608F4500E59550 /* GoogleService-Info.plist */,
 			);
@@ -251,7 +248,6 @@
 				9159E4DF287EF53200CFACCA /* ChatTableViewCell.xib in Resources */,
 				914779162885474E00E2D557 /* WeeklySchedTableViewCell.xib in Resources */,
 				1F574B2028608C6700E59550 /* Assets.xcassets in Resources */,
-				DE779E682875B7F800E4A90E /* Images.xcassets in Resources */,
 				1FA2FFEA28647415003A49C0 /* NoInternet.storyboard in Resources */,
 				1F133BE92861FF01002D587A /* Main.storyboard in Resources */,
 				1F574B2B28608F4500E59550 /* GoogleService-Info.plist in Resources */,

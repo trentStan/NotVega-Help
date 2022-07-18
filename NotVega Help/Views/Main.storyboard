@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, student" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCE-hg-y8Z">
-                                <rect key="frame" x="25" y="98" width="365" height="43"/>
+                                <rect key="frame" x="25" y="98" width="365" height="119"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bFD-vs-ymf">
-                                <rect key="frame" x="10" y="191" width="394" height="400"/>
+                                <rect key="frame" x="10" y="267" width="394" height="400"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AIs-0U-XsG">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="190"/>
@@ -105,18 +105,10 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hMz-fg-vuB">
-                                <rect key="frame" x="20" y="701" width="374" height="141"/>
+                                <rect key="frame" x="20" y="777" width="374" height="65"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgh-Ge-LUX">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="76"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Sign Out"/>
-                                        <connections>
-                                            <action selector="signOut:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="KYx-V4-yCJ"/>
-                                        </connections>
-                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Cb-zp-B5g">
-                                        <rect key="frame" x="0.0" y="76" width="374" height="65"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="65"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="center" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="Contact Details" textAlignment="right" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTM-wa-Bdp">
                                                 <rect key="frame" x="0.0" y="0.0" width="130" height="65"/>
@@ -155,6 +147,22 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="aeR-x4-c9f"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgh-Ge-LUX">
+                                <rect key="frame" x="317" y="88" width="77" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="KMK-0y-ll4"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign out">
+                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="14"/>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="signOut:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="KYx-V4-yCJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -167,9 +175,11 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bFD-vs-ymf" secondAttribute="trailing" constant="10" id="QpC-wk-Iap"/>
                             <constraint firstItem="hMz-fg-vuB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="UQD-bx-hGx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hMz-fg-vuB" secondAttribute="trailing" id="Y8F-jM-p5S"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Lgh-Ge-LUX" secondAttribute="trailing" constant="20" id="ZHD-aN-tmn"/>
                             <constraint firstItem="hMz-fg-vuB" firstAttribute="top" secondItem="bFD-vs-ymf" secondAttribute="bottom" constant="110" id="bVY-LE-cVb"/>
                             <constraint firstItem="zCE-hg-y8Z" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="hhi-Wg-Vib"/>
                             <constraint firstItem="bFD-vs-ymf" firstAttribute="top" secondItem="zCE-hg-y8Z" secondAttribute="bottom" constant="50" id="i6r-CL-eug"/>
+                            <constraint firstItem="Lgh-Ge-LUX" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="lMU-vA-5JA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jE5-yf-77f"/>
@@ -295,21 +305,35 @@
             </objects>
             <point key="canvasLocation" x="2041" y="-391"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="MAE-3O-e25">
             <objects>
-                <viewController id="qRk-0d-49b" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CampusMap" id="qRk-0d-49b" customClass="MapViewController" customModule="NotVega_Help" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wNr-sV-pnP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NotVega Map" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QEj-XG-rFL">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="FKg-m4-7VD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QEj-XG-rFL" firstAttribute="leading" secondItem="FKg-m4-7VD" secondAttribute="leading" id="CWh-86-dKR"/>
+                            <constraint firstItem="QEj-XG-rFL" firstAttribute="centerX" secondItem="wNr-sV-pnP" secondAttribute="centerX" id="iug-oY-pPs"/>
+                            <constraint firstItem="QEj-XG-rFL" firstAttribute="top" secondItem="FKg-m4-7VD" secondAttribute="top" id="tHh-Do-968"/>
+                            <constraint firstItem="QEj-XG-rFL" firstAttribute="bottom" secondItem="FKg-m4-7VD" secondAttribute="bottom" id="zgh-Uc-40I"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zer-uK-jNy"/>
+                    <connections>
+                        <outlet property="campusMapImg" destination="QEj-XG-rFL" id="OTf-pg-qFU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYh-vi-mKu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="929" y="840"/>
+            <point key="canvasLocation" x="928.98550724637687" y="839.73214285714278"/>
         </scene>
         <!--Club View Controller-->
         <scene sceneID="Rzl-VM-I1m">
@@ -524,6 +548,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NotVega Map" width="1266" height="2244"/>
         <image name="calendar" width="10" height="10"/>
         <image name="club" width="19" height="9"/>
         <image name="map" width="11" height="10"/>
