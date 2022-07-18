@@ -24,7 +24,8 @@ class ClubViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "Clubs"
+        
         clubTableView.delegate = self
         clubTableView.dataSource = self
         clubTableView.register(UINib(nibName: "ClubTableViewCell", bundle: nil), forCellReuseIdentifier: "ClubReusableCell")

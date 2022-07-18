@@ -1,27 +1,21 @@
 //
-//  NoInternet.swift
+//  Navig.swift
 //  NotVega Help
 //
-//  Created by IACD-022 on 2022/06/23.
+//  Created by IACD-022 on 2022/07/18.
 //
 
 import UIKit
 
-class NoInternet: UIViewController {
+class Navig: UINavigationController {
 
-     var window: UIWindow?
-    
+    var window: UIWindow?
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func reconnect(_ sender: Any) {
-        let newScene = SceneDelegate()
-        newScene.window = window
-        newScene.configureInitialRootViewController(for: window)
-    }
+   
     
     /*
     // MARK: - Navigation
