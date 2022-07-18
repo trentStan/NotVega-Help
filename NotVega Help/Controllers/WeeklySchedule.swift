@@ -17,15 +17,42 @@ class WeeklySchedule: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scheduleTableView.dataSource = self
 
         scheduleTableView.register(UINib(nibName: "WeeklySchedTableViewCell", bundle: nil), forCellReuseIdentifier: "WeeklyScheduleCell")
+        
+        loadSchedules(day: "01")
     }
     
     func loadSchedules(day: String) {
         
+        db.collection("WeeklySchedules").document(day).collection("Modules").order(by: "id").getDocuments { querySnapshot, error in
+            if let e = error {
+                print("Could not retrieve data from firestore: \(e)")
+            } else {
+                if let snapshotDocument = querySnapshot?.documents {
+                    for doc in snapshotDocument {
+                        let data = doc.data()
+                        if let moduleName = data["name"] as? String, let moduleTime = data["time"] as? String, let moduleLecturer = data["lecturer"] as? String, let moduleVenue = data["venue"] as? String {
+                            
+                            let scheduleInfo = Schedule(name: moduleName, time: moduleTime, lecturer: moduleLecturer, classroom: moduleVenue)
+                            self.schedules.append(scheduleInfo)
+                            
+                            DispatchQueue.main.async {
+                                self.scheduleTableView.reloadData()
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func weekdayPressed(_ sender: UIButton) {
+        
+        schedules = []
         
         let selectedDay = sender.titleLabel?.text
         
@@ -47,19 +74,9 @@ class WeeklySchedule: UIViewController {
             }
         }
         
-        print(day)
+        loadSchedules(day: day)
         
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -70,7 +87,10 @@ extension WeeklySchedule: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = scheduleTableView.dequeueReusableCell(withIdentifier: "WeeklyScheduleCell", for: indexPath) as! WeeklySchedTableViewCell
-        
+        cell.moduleName.text = schedules[indexPath.row].name
+        cell.moduleTime.text = schedules[indexPath.row].time
+        cell.moduleLecturer.text = schedules[indexPath.row].lecturer
+        cell.moduleVenue.text = schedules[indexPath.row].classroom
         return cell
     }
     

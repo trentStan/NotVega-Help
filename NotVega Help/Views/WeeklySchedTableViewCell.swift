@@ -8,7 +8,12 @@
 import UIKit
 
 class WeeklySchedTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var moduleName: UILabel!
+    @IBOutlet weak var moduleTime: UILabel!
+    @IBOutlet weak var moduleLecturer: UILabel!
+    @IBOutlet weak var moduleVenue: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
