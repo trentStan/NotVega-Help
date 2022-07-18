@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D8k-aN-V3T">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D8k-aN-V3T">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -186,66 +186,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="REN-xn-yPg">
-                                <rect key="frame" x="10" y="108" width="394" height="704"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LOM-vL-tjH">
+                                <rect key="frame" x="0.0" y="126" width="414" height="60"/>
                                 <subviews>
-                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oAx-cM-S8x">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="35"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="Z9s-Ts-jci"/>
-                                        </constraints>
-                                        <items>
-                                            <barButtonItem title="Mon" width="80" id="iLW-9I-qrS"/>
-                                            <barButtonItem title="Tue" width="80" id="Dmb-ve-kjg"/>
-                                            <barButtonItem title="Wed" width="80" id="bsO-1v-12K"/>
-                                            <barButtonItem title="Thu" width="80" id="ITx-mj-S6l"/>
-                                            <barButtonItem title="Fri" width="80" id="XVY-OA-5i2"/>
-                                        </items>
-                                    </toolbar>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KiV-ak-khf">
-                                        <rect key="frame" x="0.0" y="45" width="394" height="659"/>
-                                        <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" id="K1o-Ar-Lgu">
-                                                <rect key="frame" x="20" y="49.5" width="354" height="44"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K1o-Ar-Lgu" id="lY3-E1-q72">
-                                                    <rect key="frame" x="0.0" y="0.0" width="354" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="3cl-gd-i5k">
-                                                <rect key="frame" x="20" y="93.5" width="354" height="44"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3cl-gd-i5k" id="fVB-4t-pEj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="354" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Nhb-Tg-389">
-                                                <rect key="frame" x="20" y="137.5" width="354" height="44"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nhb-Tg-389" id="S3W-OH-VDd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="354" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </prototypes>
-                                        <sections/>
-                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6m-94-bmR">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Mon"/>
+                                        <connections>
+                                            <action selector="weekdayPressed:" destination="bqs-eA-nMX" eventType="touchUpInside" id="vdJ-Ph-wkZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ti-SH-0su">
+                                        <rect key="frame" x="87" y="0.0" width="66.5" height="60"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Tue"/>
+                                        <connections>
+                                            <action selector="weekdayPressed:" destination="bqs-eA-nMX" eventType="touchUpInside" id="1ZL-QP-5hx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="on0-sv-Iow">
+                                        <rect key="frame" x="173.5" y="0.0" width="67" height="60"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Wed"/>
+                                        <connections>
+                                            <action selector="weekdayPressed:" destination="bqs-eA-nMX" eventType="touchUpInside" id="nSY-VA-RVw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdl-lx-w6e">
+                                        <rect key="frame" x="260.5" y="0.0" width="66.5" height="60"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Thu"/>
+                                        <connections>
+                                            <action selector="weekdayPressed:" destination="bqs-eA-nMX" eventType="touchUpInside" id="TUu-Ut-8pT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFC-Td-1cZ">
+                                        <rect key="frame" x="347" y="0.0" width="67" height="60"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Fri"/>
+                                        <connections>
+                                            <action selector="weekdayPressed:" destination="bqs-eA-nMX" eventType="touchUpInside" id="7Vn-Ex-o1c"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="b54-4R-9H3"/>
+                                </constraints>
                             </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KiV-ak-khf">
+                                <rect key="frame" x="0.0" y="194" width="414" height="668"/>
+                                <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <sections/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekly Schedule" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oF-2f-FqZ">
+                                <rect key="frame" x="97" y="88" width="220" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ehD-zu-Xv3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ehD-zu-Xv3" firstAttribute="bottom" secondItem="REN-xn-yPg" secondAttribute="bottom" constant="50" id="NqB-ec-M8M"/>
-                            <constraint firstItem="ehD-zu-Xv3" firstAttribute="trailing" secondItem="REN-xn-yPg" secondAttribute="trailing" constant="10" id="dWu-e3-rgB"/>
-                            <constraint firstItem="REN-xn-yPg" firstAttribute="top" secondItem="ehD-zu-Xv3" secondAttribute="top" constant="20" id="s4l-kH-DnY"/>
-                            <constraint firstItem="REN-xn-yPg" firstAttribute="leading" secondItem="ehD-zu-Xv3" secondAttribute="leading" constant="10" id="ukR-YJ-yDo"/>
+                            <constraint firstItem="LOM-vL-tjH" firstAttribute="trailing" secondItem="ehD-zu-Xv3" secondAttribute="trailing" id="0I2-v9-L9j"/>
+                            <constraint firstItem="KiV-ak-khf" firstAttribute="bottom" secondItem="ehD-zu-Xv3" secondAttribute="bottom" id="AbP-2M-Nra"/>
+                            <constraint firstItem="LOM-vL-tjH" firstAttribute="top" secondItem="3oF-2f-FqZ" secondAttribute="bottom" constant="8" symbolic="YES" id="B3L-J7-Vin"/>
+                            <constraint firstItem="KiV-ak-khf" firstAttribute="leading" secondItem="ehD-zu-Xv3" secondAttribute="leading" id="GIX-c5-VvB"/>
+                            <constraint firstItem="LOM-vL-tjH" firstAttribute="top" secondItem="3oF-2f-FqZ" secondAttribute="bottom" constant="8" symbolic="YES" id="TZq-NY-MNm"/>
+                            <constraint firstItem="ehD-zu-Xv3" firstAttribute="trailing" secondItem="3oF-2f-FqZ" secondAttribute="trailing" constant="97" id="e6g-5q-Pwa"/>
+                            <constraint firstItem="LOM-vL-tjH" firstAttribute="leading" secondItem="9TW-ya-onn" secondAttribute="leading" id="fgD-Us-TSQ"/>
+                            <constraint firstItem="KiV-ak-khf" firstAttribute="top" secondItem="LOM-vL-tjH" secondAttribute="bottom" constant="8" symbolic="YES" id="hWq-oY-IpR"/>
+                            <constraint firstItem="3oF-2f-FqZ" firstAttribute="leading" secondItem="ehD-zu-Xv3" secondAttribute="leading" constant="97" id="nwS-3r-tI6"/>
+                            <constraint firstItem="3oF-2f-FqZ" firstAttribute="top" secondItem="ehD-zu-Xv3" secondAttribute="top" id="vpK-7H-o9J"/>
+                            <constraint firstItem="KiV-ak-khf" firstAttribute="trailing" secondItem="ehD-zu-Xv3" secondAttribute="trailing" id="y1s-Nf-fjK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tAq-Zi-cXi"/>
+                    <connections>
+                        <outlet property="scheduleTableView" destination="KiV-ak-khf" id="149-dc-v9R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="biS-o3-1HC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
