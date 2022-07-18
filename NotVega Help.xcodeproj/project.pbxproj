@@ -30,8 +30,6 @@
 		914779152885474E00E2D557 /* WeeklySchedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914779132885474E00E2D557 /* WeeklySchedTableViewCell.swift */; };
 		914779162885474E00E2D557 /* WeeklySchedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914779142885474E00E2D557 /* WeeklySchedTableViewCell.xib */; };
 		914779182885482600E2D557 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914779172885482600E2D557 /* Schedule.swift */; };
-		9159E4DB287EF28300CFACCA /* GroupChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159E4DA287EF28300CFACCA /* GroupChatViewController.swift */; };
-		9159E4DF287EF53200CFACCA /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9159E4DD287EF53200CFACCA /* ChatTableViewCell.xib */; };
 		9159E4E1287EF75D00CFACCA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159E4E0287EF75D00CFACCA /* Message.swift */; };
 		97D0E4239CD705AAA5B7AC68 /* Pods_NotVega_Help.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E35F28F1110CCF68B61A5AA /* Pods_NotVega_Help.framework */; };
 		DE779E682875B7F800E4A90E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE779E672875B7F800E4A90E /* Images.xcassets */; };
@@ -69,8 +67,6 @@
 		914779132885474E00E2D557 /* WeeklySchedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklySchedTableViewCell.swift; sourceTree = "<group>"; };
 		914779142885474E00E2D557 /* WeeklySchedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeeklySchedTableViewCell.xib; sourceTree = "<group>"; };
 		914779172885482600E2D557 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
-		9159E4DA287EF28300CFACCA /* GroupChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatViewController.swift; sourceTree = "<group>"; };
-		9159E4DD287EF53200CFACCA /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 		9159E4E0287EF75D00CFACCA /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		DE779E672875B7F800E4A90E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DE779E6F287F274F00E4A90E /* WeeklySchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklySchedule.swift; sourceTree = "<group>"; };
@@ -122,7 +118,6 @@
 				1FA2FFEB2864743C003A49C0 /* NoInternet.swift */,
 				912E9672287C550000FAF7DE /* ClubViewController.swift */,
 				912E9674287C66B100FAF7DE /* ClubDetailViewController.swift */,
-				9159E4DA287EF28300CFACCA /* GroupChatViewController.swift */,
 				1FA2FFEF28857092003A49C0 /* Navig.swift */,
 			);
 			path = Controllers;
@@ -136,7 +131,6 @@
 				1FA2FFE928647415003A49C0 /* NoInternet.storyboard */,
 				1F574B2128608C6700E59550 /* LaunchScreen.storyboard */,
 				912E966F287C523C00FAF7DE /* ClubTableViewCell.xib */,
-				9159E4DD287EF53200CFACCA /* ChatTableViewCell.xib */,
 				91477911288544E400E2D557 /* ClubTableViewCell.swift */,
 				914779132885474E00E2D557 /* WeeklySchedTableViewCell.swift */,
 				914779142885474E00E2D557 /* WeeklySchedTableViewCell.xib */,
@@ -248,7 +242,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F574B2328608C6700E59550 /* LaunchScreen.storyboard in Resources */,
-				9159E4DF287EF53200CFACCA /* ChatTableViewCell.xib in Resources */,
 				914779162885474E00E2D557 /* WeeklySchedTableViewCell.xib in Resources */,
 				1F574B2028608C6700E59550 /* Assets.xcassets in Resources */,
 				DE779E682875B7F800E4A90E /* Images.xcassets in Resources */,
@@ -316,7 +309,6 @@
 				914779152885474E00E2D557 /* WeeklySchedTableViewCell.swift in Sources */,
 				DE779E70287F274F00E4A90E /* WeeklySchedule.swift in Sources */,
 				912E9673287C550000FAF7DE /* ClubViewController.swift in Sources */,
-				9159E4DB287EF28300CFACCA /* GroupChatViewController.swift in Sources */,
 				1F55D1812861E516009A870D /* Protocols.swift in Sources */,
 				1F574B1B28608C6600E59550 /* Main.swift in Sources */,
 				1F574B1728608C6600E59550 /* AppDelegate.swift in Sources */,
