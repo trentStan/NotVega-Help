@@ -69,6 +69,17 @@ class WeeklySchedule: UIViewController {
         
         schedules = []
         
+        if let button = sender as? UIButton {
+            
+            if button.isSelected {
+                button.backgroundColor = UIColor.clear
+                print("Not Selected")
+            } else {
+                button.backgroundColor = UIColor(red: 0.80, green: 0.91, blue: 0.80, alpha: 1.00)
+                print("Selected")
+            }
+        }
+        
         let selectedDay = sender.titleLabel?.text
         
         var day: String {
