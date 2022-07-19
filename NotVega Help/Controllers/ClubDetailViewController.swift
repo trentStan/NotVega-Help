@@ -18,9 +18,9 @@ class ClubDetailViewController: UIViewController {
     
     @IBOutlet weak var clubImage: UIImageView!
     @IBOutlet weak var clubTitle: UILabel!
+    @IBOutlet weak var clubInto: UILabel!
     @IBOutlet weak var clubDay: UILabel!
     @IBOutlet weak var clubTime: UILabel!
-    @IBOutlet weak var clubDescView: UIView!
     @IBOutlet weak var clubDesc: UITextView!
     @IBOutlet weak var clubEmail: UILabel!
     @IBOutlet weak var clubPhoneNum: UILabel!
@@ -28,8 +28,6 @@ class ClubDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        clubDescView.layer.cornerRadius = 10
         clubTitle.text = cTitle
         clubDay.text = cDay
         clubTime.text = cTime
@@ -37,4 +35,7 @@ class ClubDetailViewController: UIViewController {
         clubEmail.text = cEmail
         clubPhoneNum.text = cPhoneNum
     }
+    
+    @IBOutlet weak var joinClubPressed: UIImageView!
+    
 }
