@@ -19,8 +19,11 @@ class WeeklySchedule: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        scheduleTableView.backgroundView = nil
+        scheduleTableView.backgroundColor = UIColor.white
+        
         scheduleTableView.dataSource = self
-//        scheduleTableView.delegate = self
+        scheduleTableView.delegate = self
 
         scheduleTableView.register(UINib(nibName: "WeeklySchedTableViewCell", bundle: nil), forCellReuseIdentifier: "WeeklyScheduleCell")
         
@@ -91,9 +94,9 @@ extension WeeklySchedule: UITableViewDataSource, UITableViewDelegate {
         return 1
     }
     
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//           return cellSpacingHeight
-//       }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+           return cellSpacingHeight
+       }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = scheduleTableView.dequeueReusableCell(withIdentifier: "WeeklyScheduleCell", for: indexPath) as! WeeklySchedTableViewCell
@@ -102,8 +105,6 @@ extension WeeklySchedule: UITableViewDataSource, UITableViewDelegate {
         cell.moduleLecturer.text = schedules[indexPath.section].lecturer
         cell.moduleVenue.text = schedules[indexPath.section].classroom
         
-//        cell.backgroundView?.layer.cornerRadius = 5
-//        cell.backgroundView?.clipsToBounds = true
         return cell
     }
 }

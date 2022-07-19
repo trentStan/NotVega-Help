@@ -19,7 +19,7 @@ class WeeklySchedTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         scheduleView.layer.cornerRadius = 5
-        scheduleView.layer.shadowColor = UIColor.gray.cgColor
+        scheduleView.layer.shadowColor = UIColor.lightGray.cgColor
         scheduleView.layer.shadowOpacity = 1
         scheduleView.layer.shadowOffset = .zero
         scheduleView.layer.shadowRadius = 10
