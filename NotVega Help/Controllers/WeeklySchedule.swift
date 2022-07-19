@@ -14,11 +14,13 @@ class WeeklySchedule: UIViewController {
     private let db = Firestore.firestore()
     
     var schedules: [Schedule] = []
+    let cellSpacingHeight: CGFloat = 2
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         scheduleTableView.dataSource = self
+//        scheduleTableView.delegate = self
 
         scheduleTableView.register(UINib(nibName: "WeeklySchedTableViewCell", bundle: nil), forCellReuseIdentifier: "WeeklyScheduleCell")
         
@@ -80,19 +82,28 @@ class WeeklySchedule: UIViewController {
 
 }
 
-extension WeeklySchedule: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        schedules.count
+extension WeeklySchedule: UITableViewDataSource, UITableViewDelegate {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return schedules.count
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//           return cellSpacingHeight
+//       }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = scheduleTableView.dequeueReusableCell(withIdentifier: "WeeklyScheduleCell", for: indexPath) as! WeeklySchedTableViewCell
-        cell.moduleName.text = schedules[indexPath.row].name
-        cell.moduleTime.text = schedules[indexPath.row].time
-        cell.moduleLecturer.text = schedules[indexPath.row].lecturer
-        cell.moduleVenue.text = schedules[indexPath.row].classroom
+        cell.moduleName.text = schedules[indexPath.section].name
+        cell.moduleTime.text = schedules[indexPath.section].time
+        cell.moduleLecturer.text = schedules[indexPath.section].lecturer
+        cell.moduleVenue.text = schedules[indexPath.section].classroom
+        
+//        cell.backgroundView?.layer.cornerRadius = 5
+//        cell.backgroundView?.clipsToBounds = true
         return cell
     }
-    
-    
 }

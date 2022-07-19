@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "8135204F-2509-4D5C-8D51-E3C864870C6C_4_5005_c.jpeg",
+      "filename" : "dots-2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -17,8 +17,5 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "template-rendering-intent" : "original"
   }
 }
