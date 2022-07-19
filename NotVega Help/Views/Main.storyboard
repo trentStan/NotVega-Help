@@ -204,56 +204,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LOM-vL-tjH">
-                                <rect key="frame" x="0.0" y="126" width="414" height="60"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6m-94-bmR">
-                                        <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Mon"/>
-                                        <connections>
-                                            <action selector="weekdayPressed:" destination="bqs-eA-nMX" eventType="touchUpInside" id="vdJ-Ph-wkZ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ti-SH-0su">
-                                        <rect key="frame" x="87" y="0.0" width="66.5" height="60"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Tue"/>
-                                        <connections>
-                                            <action selector="weekdayPressed:" destination="bqs-eA-nMX" eventType="touchUpInside" id="1ZL-QP-5hx"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="on0-sv-Iow">
-                                        <rect key="frame" x="173.5" y="0.0" width="67" height="60"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Wed"/>
-                                        <connections>
-                                            <action selector="weekdayPressed:" destination="bqs-eA-nMX" eventType="touchUpInside" id="nSY-VA-RVw"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdl-lx-w6e">
-                                        <rect key="frame" x="260.5" y="0.0" width="66.5" height="60"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Thu"/>
-                                        <connections>
-                                            <action selector="weekdayPressed:" destination="bqs-eA-nMX" eventType="touchUpInside" id="TUu-Ut-8pT"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFC-Td-1cZ">
-                                        <rect key="frame" x="347" y="0.0" width="67" height="60"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Fri"/>
-                                        <connections>
-                                            <action selector="weekdayPressed:" destination="bqs-eA-nMX" eventType="touchUpInside" id="7Vn-Ex-o1c"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="b54-4R-9H3"/>
-                                </constraints>
-                            </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KiV-ak-khf">
-                                <rect key="frame" x="0.0" y="215" width="414" height="647"/>
+                                <rect key="frame" x="0.0" y="209" width="414" height="653"/>
                                 <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <sections/>
                             </tableView>
@@ -263,25 +215,87 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDL-Sf-qUa">
+                                <rect key="frame" x="10" y="148" width="394" height="31"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="LOM-vL-tjH">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="31"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6m-94-bmR">
+                                                <rect key="frame" x="0.0" y="0.0" width="61" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Mon"/>
+                                                <connections>
+                                                    <action selector="weekdayPressed:" destination="bqs-eA-nMX" eventType="touchUpInside" id="vdJ-Ph-wkZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ti-SH-0su">
+                                                <rect key="frame" x="83" y="0.0" width="61.5" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Tue"/>
+                                                <connections>
+                                                    <action selector="weekdayPressed:" destination="bqs-eA-nMX" eventType="touchUpInside" id="1ZL-QP-5hx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="on0-sv-Iow">
+                                                <rect key="frame" x="166.5" y="0.0" width="61" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Wed"/>
+                                                <connections>
+                                                    <action selector="weekdayPressed:" destination="bqs-eA-nMX" eventType="touchUpInside" id="nSY-VA-RVw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdl-lx-w6e">
+                                                <rect key="frame" x="249.5" y="0.0" width="61.5" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Thu"/>
+                                                <connections>
+                                                    <action selector="weekdayPressed:" destination="bqs-eA-nMX" eventType="touchUpInside" id="TUu-Ut-8pT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFC-Td-1cZ">
+                                                <rect key="frame" x="333" y="0.0" width="61" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Fri"/>
+                                                <connections>
+                                                    <action selector="weekdayPressed:" destination="bqs-eA-nMX" eventType="touchUpInside" id="7Vn-Ex-o1c"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="LOM-vL-tjH" firstAttribute="top" secondItem="eDL-Sf-qUa" secondAttribute="top" id="JkX-xA-S7n"/>
+                                    <constraint firstItem="LOM-vL-tjH" firstAttribute="leading" secondItem="eDL-Sf-qUa" secondAttribute="leading" id="OBS-7R-p5L"/>
+                                    <constraint firstItem="LOM-vL-tjH" firstAttribute="centerY" secondItem="eDL-Sf-qUa" secondAttribute="centerY" id="RsX-Zn-K2L"/>
+                                    <constraint firstItem="LOM-vL-tjH" firstAttribute="centerX" secondItem="eDL-Sf-qUa" secondAttribute="centerX" id="wWG-CB-Doo"/>
+                                    <constraint firstAttribute="bottom" secondItem="LOM-vL-tjH" secondAttribute="bottom" id="ySs-Le-6Tb"/>
+                                    <constraint firstAttribute="trailing" secondItem="LOM-vL-tjH" secondAttribute="trailing" id="yv6-bR-U9Z"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ehD-zu-Xv3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="LOM-vL-tjH" firstAttribute="trailing" secondItem="ehD-zu-Xv3" secondAttribute="trailing" id="0I2-v9-L9j"/>
+                            <constraint firstItem="eDL-Sf-qUa" firstAttribute="top" secondItem="3oF-2f-FqZ" secondAttribute="bottom" constant="30" id="94R-T2-iiq"/>
                             <constraint firstItem="KiV-ak-khf" firstAttribute="bottom" secondItem="ehD-zu-Xv3" secondAttribute="bottom" id="AbP-2M-Nra"/>
-                            <constraint firstItem="LOM-vL-tjH" firstAttribute="top" secondItem="3oF-2f-FqZ" secondAttribute="bottom" constant="8" symbolic="YES" id="B3L-J7-Vin"/>
-                            <constraint firstItem="KiV-ak-khf" firstAttribute="top" secondItem="LOM-vL-tjH" secondAttribute="bottom" constant="29" id="BXN-vu-Len"/>
+                            <constraint firstItem="eDL-Sf-qUa" firstAttribute="centerX" secondItem="3oF-2f-FqZ" secondAttribute="centerX" id="DPW-nh-Iom"/>
+                            <constraint firstItem="ehD-zu-Xv3" firstAttribute="trailing" secondItem="eDL-Sf-qUa" secondAttribute="trailing" constant="10" id="Dun-Om-BVv"/>
                             <constraint firstItem="KiV-ak-khf" firstAttribute="leading" secondItem="ehD-zu-Xv3" secondAttribute="leading" id="GIX-c5-VvB"/>
-                            <constraint firstItem="LOM-vL-tjH" firstAttribute="top" secondItem="3oF-2f-FqZ" secondAttribute="bottom" constant="8" symbolic="YES" id="TZq-NY-MNm"/>
+                            <constraint firstItem="KiV-ak-khf" firstAttribute="top" secondItem="eDL-Sf-qUa" secondAttribute="bottom" constant="30" id="HK7-vh-hlP"/>
                             <constraint firstItem="ehD-zu-Xv3" firstAttribute="trailing" secondItem="3oF-2f-FqZ" secondAttribute="trailing" constant="97" id="e6g-5q-Pwa"/>
-                            <constraint firstItem="LOM-vL-tjH" firstAttribute="leading" secondItem="9TW-ya-onn" secondAttribute="leading" id="fgD-Us-TSQ"/>
+                            <constraint firstItem="eDL-Sf-qUa" firstAttribute="leading" secondItem="ehD-zu-Xv3" secondAttribute="leading" constant="10" id="grM-oy-nNx"/>
+                            <constraint firstItem="ehD-zu-Xv3" firstAttribute="trailing" secondItem="eDL-Sf-qUa" secondAttribute="trailing" constant="10" id="hN1-Qq-wYJ"/>
                             <constraint firstItem="3oF-2f-FqZ" firstAttribute="leading" secondItem="ehD-zu-Xv3" secondAttribute="leading" constant="97" id="nwS-3r-tI6"/>
                             <constraint firstItem="3oF-2f-FqZ" firstAttribute="top" secondItem="ehD-zu-Xv3" secondAttribute="top" id="vpK-7H-o9J"/>
                             <constraint firstItem="KiV-ak-khf" firstAttribute="trailing" secondItem="ehD-zu-Xv3" secondAttribute="trailing" id="y1s-Nf-fjK"/>
+                            <constraint firstItem="eDL-Sf-qUa" firstAttribute="leading" secondItem="ehD-zu-Xv3" secondAttribute="leading" constant="10" id="ziF-vW-YOT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tAq-Zi-cXi"/>
                     <connections>
+                        <outlet property="dailyView" destination="eDL-Sf-qUa" id="Jcu-en-KRa"/>
                         <outlet property="scheduleTableView" destination="KiV-ak-khf" id="149-dc-v9R"/>
                     </connections>
                 </viewController>

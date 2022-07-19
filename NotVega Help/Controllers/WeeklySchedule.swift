@@ -11,13 +11,23 @@ import FirebaseAuth
 
 class WeeklySchedule: UIViewController {
     @IBOutlet weak var scheduleTableView: UITableView!
+    
+    @IBOutlet weak var dailyView: UIView!
+    
     private let db = Firestore.firestore()
     
     var schedules: [Schedule] = []
-    let cellSpacingHeight: CGFloat = 2
+    let cellSpacingHeight: CGFloat = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dailyView.layer.cornerRadius = 20
+        dailyView.layer.shadowColor = UIColor.lightGray.cgColor
+        dailyView.layer.shadowOpacity = 1
+        dailyView.layer.shadowOffset = .zero
+        dailyView.layer.shadowRadius = 20
+        dailyView.layer.shadowPath = UIBezierPath(rect: dailyView.bounds).cgPath
         
         scheduleTableView.backgroundView = nil
         scheduleTableView.backgroundColor = UIColor.white
