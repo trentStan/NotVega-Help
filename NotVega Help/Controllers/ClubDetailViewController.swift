@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseAuth
 
 class ClubDetailViewController: UIViewController {
+    
+    private let db = Firestore.firestore()
     
     var cTitle: String?
     var cDay: String?
@@ -36,6 +40,10 @@ class ClubDetailViewController: UIViewController {
         clubPhoneNum.text = cPhoneNum
     }
     
-    @IBOutlet weak var joinClubPressed: UIImageView!
+    @IBAction func addToCalandarPressed(_ sender: Any) {
+        
+        print("Working")
+    }
+    
     
 }

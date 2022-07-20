@@ -444,14 +444,44 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IB6-PX-iqr">
-                                                <rect key="frame" x="0.0" y="59.5" width="195.5" height="153"/>
-                                                <color key="tintColor" red="0.95686274509803915" green="0.63529411764705879" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLH-Iy-Bxt">
+                                                <rect key="frame" x="0.0" y="58" width="194" height="154"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="WSo-IX-Aor">
+                                                        <rect key="frame" x="8" y="8.5" width="180" height="130"/>
+                                                        <color key="tintColor" red="0.95686274510000002" green="0.63529411759999999" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="178.5" id="U9B-cp-gFt"/>
+                                                            <constraint firstAttribute="height" constant="131" id="fdt-ZR-wJa"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aN-gf-XZe">
+                                                        <rect key="frame" x="27" y="13" width="140" height="120"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="120" id="E4V-Y5-wTS"/>
+                                                            <constraint firstAttribute="width" constant="140" id="ofH-bO-QMx"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="addToCalandarPressed:" destination="Ppr-Mn-BKd" eventType="touchUpInside" id="gAP-pX-UKD"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="194" id="4v8-fn-kHE"/>
-                                                    <constraint firstAttribute="height" constant="154" id="twm-Ny-zsx"/>
+                                                    <constraint firstAttribute="height" constant="154" id="0EW-tp-dk6"/>
+                                                    <constraint firstItem="4aN-gf-XZe" firstAttribute="leading" secondItem="aLH-Iy-Bxt" secondAttribute="leading" constant="27" id="0Kc-pb-JFX"/>
+                                                    <constraint firstItem="WSo-IX-Aor" firstAttribute="top" secondItem="aLH-Iy-Bxt" secondAttribute="top" constant="7" id="6Kq-8E-Ca3"/>
+                                                    <constraint firstItem="WSo-IX-Aor" firstAttribute="leading" secondItem="aLH-Iy-Bxt" secondAttribute="leading" constant="8" id="IC6-6O-uQE"/>
+                                                    <constraint firstItem="4aN-gf-XZe" firstAttribute="top" secondItem="aLH-Iy-Bxt" secondAttribute="top" constant="13" id="IGX-fl-a3n"/>
+                                                    <constraint firstAttribute="trailing" secondItem="4aN-gf-XZe" secondAttribute="trailing" constant="27" id="LwN-nt-kPF"/>
+                                                    <constraint firstAttribute="bottom" secondItem="4aN-gf-XZe" secondAttribute="bottom" constant="21" id="MtU-na-84I"/>
+                                                    <constraint firstAttribute="bottom" secondItem="WSo-IX-Aor" secondAttribute="bottom" constant="16" id="fjQ-Sj-SVD"/>
+                                                    <constraint firstAttribute="trailing" secondItem="WSo-IX-Aor" secondAttribute="trailing" constant="7.5" id="n9i-Eu-eWh"/>
+                                                    <constraint firstAttribute="width" constant="194" id="u2W-iY-7JP"/>
                                                 </constraints>
-                                            </imageView>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enf-XR-7W0">
                                                 <rect key="frame" x="0.0" y="230" width="194" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -501,7 +531,6 @@
                         <outlet property="clubPhoneNum" destination="zju-qT-OXb" id="WOh-Vl-iRm"/>
                         <outlet property="clubTime" destination="enf-XR-7W0" id="Kem-Tw-x7A"/>
                         <outlet property="clubTitle" destination="jKh-rF-LtX" id="SPT-B7-J79"/>
-                        <outlet property="joinClubPressed" destination="IB6-PX-iqr" id="XN7-bk-Y4y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gM8-gb-JA7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
