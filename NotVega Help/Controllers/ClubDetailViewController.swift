@@ -42,7 +42,33 @@ class ClubDetailViewController: UIViewController {
     
     @IBAction func addToCalandarPressed(_ sender: Any) {
         
-        print("Working")
+        var day: String {
+        
+            switch cDay {
+            case "Tuesdays":
+                return "02"
+            case "Wednesdays":
+                return "03"
+            case "Fridays":
+                return "05"
+            default:
+                return "04"
+            }
+        }
+        
+        db.collection("WeeklySchedules").document(day).collection("Modules").addDocument(data: [
+            "id": 5,
+            "lecturer": cPhoneNum as Any,
+            "name": cTitle as Any,
+            "time": cTime as Any,
+            "venue": cEmail as Any
+        ]) { (error) in
+            if let e = error {
+                print("Could not update Schedule data to Firestore: \(e)")
+            } else {
+                print("Successfully added")
+            }
+        }
     }
     
     
