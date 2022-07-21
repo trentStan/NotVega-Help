@@ -498,6 +498,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vx-nw-ZJN">
+                                <rect key="frame" x="20" y="812" width="354" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Group Chat"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CVh-hl-RUu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

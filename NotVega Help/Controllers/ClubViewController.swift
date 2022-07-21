@@ -15,6 +15,7 @@ class ClubViewController: UIViewController {
     
     private let db = Firestore.firestore()
     var cTitle: String?
+    var cIntro: String?
     var cDay: String?
     var cTime: String?
     var cDescription: String?
@@ -85,6 +86,7 @@ extension ClubViewController: UITableViewDelegate {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? ClubDetailViewController {
             DispatchQueue.main.async {
                 self.cTitle = self.clubInformation[indexPath.row].name
+                self.cIntro = self.clubInformation[indexPath.row].intro
                 self.cDay = self.clubInformation[indexPath.row].day
                 self.cTime = self.clubInformation[indexPath.row].time
                 self.cDescription = self.clubInformation[indexPath.row].description
@@ -100,6 +102,7 @@ extension ClubViewController: UITableViewDelegate {
         if segue.identifier == "ClubDetails" {
             let clubDetailVC = segue.destination as! ClubDetailViewController
             clubDetailVC.cTitle = cTitle
+            clubDetailVC.cIntro = cIntro
             clubDetailVC.cDay = cDay
             clubDetailVC.cTime = cTime
             clubDetailVC.cDescription = cDescription

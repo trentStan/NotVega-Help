@@ -14,11 +14,24 @@ class ClubDetailViewController: UIViewController {
     private let db = Firestore.firestore()
     
     var cTitle: String?
+    var cIntro: String?
     var cDay: String?
     var cTime: String?
     var cDescription: String?
     var cEmail: String?
     var cPhoneNum: String?
+    var cImage: String {
+        switch cTitle {
+        case "Gaming Club":
+            return "gaming.jpg"
+        case "Community Helpers Club":
+            return "community.jpg"
+        case "Debate Club":
+            return "debate.jpg"
+        default:
+            return ""
+        }
+    }
     
     @IBOutlet weak var clubImage: UIImageView!
     @IBOutlet weak var clubTitle: UILabel!
@@ -32,6 +45,9 @@ class ClubDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        clubImage.image = UIImage(named: cImage)
+        clubInto.text = cIntro
         clubTitle.text = cTitle
         clubDay.text = cDay
         clubTime.text = cTime
