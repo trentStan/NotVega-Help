@@ -23,6 +23,8 @@
 		1FA2FFEA28647415003A49C0 /* NoInternet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA2FFE928647415003A49C0 /* NoInternet.storyboard */; };
 		1FA2FFEC2864743C003A49C0 /* NoInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA2FFEB2864743C003A49C0 /* NoInternet.swift */; };
 		1FA2FFF028857093003A49C0 /* Navig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA2FFEF28857092003A49C0 /* Navig.swift */; };
+		91231361288AAEC3005B3CB8 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91231360288AAEC3005B3CB8 /* ChatTableViewCell.swift */; };
+		91231363288AAECE005B3CB8 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91231362288AAECE005B3CB8 /* ChatTableViewCell.xib */; };
 		912E9671287C523C00FAF7DE /* ClubTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 912E966F287C523C00FAF7DE /* ClubTableViewCell.xib */; };
 		912E9673287C550000FAF7DE /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9672287C550000FAF7DE /* ClubViewController.swift */; };
 		912E9675287C66B100FAF7DE /* ClubDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9674287C66B100FAF7DE /* ClubDetailViewController.swift */; };
@@ -63,6 +65,8 @@
 		3008460DFFCBEFD2073A35E3 /* Pods-NotVega Help.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotVega Help.debug.xcconfig"; path = "Target Support Files/Pods-NotVega Help/Pods-NotVega Help.debug.xcconfig"; sourceTree = "<group>"; };
 		3E35F28F1110CCF68B61A5AA /* Pods_NotVega_Help.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotVega_Help.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E9E9235E316A8B52BC667AB /* Pods-NotVega Help.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotVega Help.release.xcconfig"; path = "Target Support Files/Pods-NotVega Help/Pods-NotVega Help.release.xcconfig"; sourceTree = "<group>"; };
+		91231360288AAEC3005B3CB8 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatTableViewCell.swift; path = ../../../../.Trash/ChatTableViewCell.swift; sourceTree = "<group>"; };
+		91231362288AAECE005B3CB8 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 		912E966F287C523C00FAF7DE /* ClubTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClubTableViewCell.xib; sourceTree = "<group>"; };
 		912E9672287C550000FAF7DE /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
 		912E9674287C66B100FAF7DE /* ClubDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubDetailViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 		1F55D1832861E5E6009A870D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				91231360288AAEC3005B3CB8 /* ChatTableViewCell.swift */,
+				91231362288AAECE005B3CB8 /* ChatTableViewCell.xib */,
 				1F133BE62861F6D0002D587A /* LogIn.storyboard */,
 				1F133BE82861FF01002D587A /* Main.storyboard */,
 				1FA2FFE928647415003A49C0 /* NoInternet.storyboard */,
@@ -262,6 +268,7 @@
 				917E33C528895B9200B312C3 /* MessageCell.xib in Resources */,
 				1F133BE92861FF01002D587A /* Main.storyboard in Resources */,
 				1F574B2B28608F4500E59550 /* GoogleService-Info.plist in Resources */,
+				91231363288AAECE005B3CB8 /* ChatTableViewCell.xib in Resources */,
 				1F133BE72861F6D0002D587A /* LogIn.storyboard in Resources */,
 				912E9671287C523C00FAF7DE /* ClubTableViewCell.xib in Resources */,
 			);
@@ -321,6 +328,7 @@
 				1F55D17B2861E27F009A870D /* User.swift in Sources */,
 				1F55D17F2861E3CC009A870D /* Club.swift in Sources */,
 				914779152885474E00E2D557 /* WeeklySchedTableViewCell.swift in Sources */,
+				91231361288AAEC3005B3CB8 /* ChatTableViewCell.swift in Sources */,
 				DE779E70287F274F00E4A90E /* WeeklySchedule.swift in Sources */,
 				912E9673287C550000FAF7DE /* ClubViewController.swift in Sources */,
 				1F55D1812861E516009A870D /* Protocols.swift in Sources */,
