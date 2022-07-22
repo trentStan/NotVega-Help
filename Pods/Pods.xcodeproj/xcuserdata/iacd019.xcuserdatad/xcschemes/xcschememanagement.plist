@@ -7,12 +7,12 @@
 		<key>BoringSSL-GRPC.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>13</integer>
+			<integer>12</integer>
 		</dict>
 		<key>FirebaseAuth.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>14</integer>
+			<integer>13</integer>
 		</dict>
 		<key>FirebaseCore.xcscheme_^#shared#^_</key>
 		<dict>
@@ -32,7 +32,7 @@
 		<key>FirebaseFirestore.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>16</integer>
+			<integer>15</integer>
 		</dict>
 		<key>GTMSessionFetcher.xcscheme_^#shared#^_</key>
 		<dict>
@@ -57,7 +57,7 @@
 		<key>Pods-NotVega Help.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>15</integer>
+			<integer>14</integer>
 		</dict>
 		<key>PromisesObjC.xcscheme_^#shared#^_</key>
 		<dict>
@@ -67,12 +67,12 @@
 		<key>ReachabilitySwift.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>19</integer>
+			<integer>17</integer>
 		</dict>
 		<key>abseil.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>17</integer>
+			<integer>16</integer>
 		</dict>
 		<key>gRPC-C++-gRPCCertificates-Cpp.xcscheme_^#shared#^_</key>
 		<dict>
