@@ -11,14 +11,29 @@ import FirebaseAuth
 
 class WeeklySchedule: UIViewController {
     @IBOutlet weak var scheduleTableView: UITableView!
+    
+    @IBOutlet weak var dailyView: UIView!
+    
     private let db = Firestore.firestore()
     
     var schedules: [Schedule] = []
+    let cellSpacingHeight: CGFloat = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        dailyView.layer.cornerRadius = 20
+        dailyView.layer.shadowColor = UIColor.lightGray.cgColor
+        dailyView.layer.shadowOpacity = 1
+        dailyView.layer.shadowOffset = .zero
+        dailyView.layer.shadowRadius = 20
+        dailyView.layer.shadowPath = UIBezierPath(rect: dailyView.bounds).cgPath
+        
+        scheduleTableView.backgroundView = nil
+        scheduleTableView.backgroundColor = UIColor.white
+        
         scheduleTableView.dataSource = self
+        scheduleTableView.delegate = self
 
         scheduleTableView.register(UINib(nibName: "WeeklySchedTableViewCell", bundle: nil), forCellReuseIdentifier: "WeeklyScheduleCell")
         
@@ -54,6 +69,17 @@ class WeeklySchedule: UIViewController {
         
         schedules = []
         
+        if let button = sender as? UIButton {
+            
+            if button.isSelected {
+                button.backgroundColor = UIColor.clear
+                print("Not Selected")
+            } else {
+                button.backgroundColor = UIColor(red: 0.80, green: 0.91, blue: 0.80, alpha: 1.00)
+                print("Selected")
+            }
+        }
+        
         let selectedDay = sender.titleLabel?.text
         
         var day: String {
@@ -80,19 +106,26 @@ class WeeklySchedule: UIViewController {
 
 }
 
-extension WeeklySchedule: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        schedules.count
+extension WeeklySchedule: UITableViewDataSource, UITableViewDelegate {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return schedules.count
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+           return cellSpacingHeight
+       }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = scheduleTableView.dequeueReusableCell(withIdentifier: "WeeklyScheduleCell", for: indexPath) as! WeeklySchedTableViewCell
-        cell.moduleName.text = schedules[indexPath.row].name
-        cell.moduleTime.text = schedules[indexPath.row].time
-        cell.moduleLecturer.text = schedules[indexPath.row].lecturer
-        cell.moduleVenue.text = schedules[indexPath.row].classroom
+        cell.moduleName.text = schedules[indexPath.section].name
+        cell.moduleTime.text = schedules[indexPath.section].time
+        cell.moduleLecturer.text = schedules[indexPath.section].lecturer
+        cell.moduleVenue.text = schedules[indexPath.section].classroom
+        
         return cell
     }
-    
-    
 }

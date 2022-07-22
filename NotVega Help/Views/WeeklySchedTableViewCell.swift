@@ -13,16 +13,23 @@ class WeeklySchedTableViewCell: UITableViewCell {
     @IBOutlet weak var moduleTime: UILabel!
     @IBOutlet weak var moduleLecturer: UILabel!
     @IBOutlet weak var moduleVenue: UILabel!
+    @IBOutlet weak var scheduleView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        scheduleView.layer.cornerRadius = 10
+        scheduleView.layer.shadowColor = UIColor.lightGray.cgColor
+        scheduleView.layer.shadowOpacity = 1
+        scheduleView.layer.shadowOffset = .zero
+        scheduleView.layer.shadowRadius = 10
+        scheduleView.layer.shadowPath = UIBezierPath(rect: scheduleView.bounds).cgPath
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-    
+    }  
 }
