@@ -18,19 +18,27 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RLQ-WX-hYk">
-                        <rect key="frame" x="10" y="10" width="314" height="59.5"/>
+                        <rect key="frame" x="10" y="10" width="314" height="57"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YdT-rx-SqJ">
+                                <rect key="frame" x="0.0" y="1.5" width="57" height="54"/>
+                                <color key="tintColor" red="0.95686274510000002" green="0.63529411759999999" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="LM3-fF-c3T"/>
+                                    <constraint firstAttribute="height" constant="57" id="cXk-kN-ywe"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZO-Y1-LSB">
-                                <rect key="frame" x="0.0" y="0.0" width="237" height="59.5"/>
+                                <rect key="frame" x="77" y="0.0" width="160" height="57"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5d-dN-NF6">
-                                        <rect key="frame" x="10" y="10" width="217" height="14.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5d-dN-NF6">
+                                        <rect key="frame" x="10" y="10" width="140" height="14.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poa-lQ-6LW">
-                                        <rect key="frame" x="10" y="29.5" width="217" height="20"/>
+                                        <rect key="frame" x="10" y="29.5" width="140" height="17.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -48,7 +56,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="H4m-4i-hJW">
-                                <rect key="frame" x="257" y="1.5" width="57" height="56.5"/>
+                                <rect key="frame" x="257" y="1.5" width="57" height="54"/>
                                 <color key="tintColor" red="0.95686274510000002" green="0.63529411759999999" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="6D6-8T-p7k"/>
@@ -67,6 +75,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="leftImageView" destination="YdT-rx-SqJ" id="YR2-b9-r7s"/>
                 <outlet property="messageBuble" destination="hZO-Y1-LSB" id="fER-dr-7Rz"/>
                 <outlet property="messageLabel" destination="poa-lQ-6LW" id="XGw-mc-d36"/>
                 <outlet property="rightImageView" destination="H4m-4i-hJW" id="PVG-A0-niY"/>
