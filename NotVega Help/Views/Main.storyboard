@@ -502,7 +502,12 @@
                                 <rect key="frame" x="20" y="812" width="354" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Group Chat"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Group Chat">
+                                    <color key="baseForegroundColor" red="0.95686274510000002" green="0.63529411759999999" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="5bS-8F-Jf8" kind="show" id="fgS-Fv-KUQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CVh-hl-RUu"/>
@@ -543,6 +548,72 @@
             </objects>
             <point key="canvasLocation" x="3086.9565217391305" y="452.67857142857139"/>
         </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="98c-q9-SlL">
+            <objects>
+                <viewController id="5bS-8F-Jf8" customClass="ChatViewController" customModule="NotVega_Help" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eMb-B3-YX6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ky0-4k-4IV">
+                                <rect key="frame" x="0.0" y="766" width="414" height="96"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zdQ-Rp-uNR">
+                                        <rect key="frame" x="13" y="31" width="325" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7p-Ho-4RG">
+                                        <rect key="frame" x="346" y="8" width="59" height="80"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="paperplane.fill" catalog="system">
+                                            <color key="baseForegroundColor" red="0.95686274510000002" green="0.63529411759999999" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="sendPressed:" destination="5bS-8F-Jf8" eventType="touchUpInside" id="Hsj-Dk-P7i"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstItem="zdQ-Rp-uNR" firstAttribute="top" secondItem="ky0-4k-4IV" secondAttribute="top" constant="31" id="47P-19-e6N"/>
+                                    <constraint firstItem="g7p-Ho-4RG" firstAttribute="leading" secondItem="ky0-4k-4IV" secondAttribute="leading" constant="346" id="8Ih-79-6vZ"/>
+                                    <constraint firstItem="zdQ-Rp-uNR" firstAttribute="leading" secondItem="ky0-4k-4IV" secondAttribute="leading" constant="13" id="GPD-rj-8ij"/>
+                                    <constraint firstItem="g7p-Ho-4RG" firstAttribute="top" secondItem="ky0-4k-4IV" secondAttribute="top" constant="8" id="XmG-e5-Ezl"/>
+                                    <constraint firstAttribute="bottom" secondItem="g7p-Ho-4RG" secondAttribute="bottom" constant="8" id="eRn-uG-zr2"/>
+                                    <constraint firstItem="g7p-Ho-4RG" firstAttribute="leading" secondItem="zdQ-Rp-uNR" secondAttribute="trailing" constant="8" symbolic="YES" id="owo-qM-EaN"/>
+                                    <constraint firstAttribute="bottom" secondItem="zdQ-Rp-uNR" secondAttribute="bottom" constant="31" id="w26-36-jNS"/>
+                                    <constraint firstAttribute="trailing" secondItem="g7p-Ho-4RG" secondAttribute="trailing" constant="9" id="zsf-hq-gsn"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MDQ-TC-UYl">
+                                <rect key="frame" x="0.0" y="88" width="414" height="670"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HXA-Mm-uKg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MDQ-TC-UYl" firstAttribute="leading" secondItem="HXA-Mm-uKg" secondAttribute="leading" id="BeJ-eb-nA2"/>
+                            <constraint firstItem="ky0-4k-4IV" firstAttribute="leading" secondItem="HXA-Mm-uKg" secondAttribute="leading" id="Bfu-72-BaO"/>
+                            <constraint firstItem="ky0-4k-4IV" firstAttribute="bottom" secondItem="HXA-Mm-uKg" secondAttribute="bottom" id="CdA-8h-1OY"/>
+                            <constraint firstItem="ky0-4k-4IV" firstAttribute="top" secondItem="MDQ-TC-UYl" secondAttribute="bottom" constant="8" symbolic="YES" id="WX7-kV-gsl"/>
+                            <constraint firstItem="ky0-4k-4IV" firstAttribute="trailing" secondItem="HXA-Mm-uKg" secondAttribute="trailing" id="ZNc-5k-c4R"/>
+                            <constraint firstItem="MDQ-TC-UYl" firstAttribute="top" secondItem="HXA-Mm-uKg" secondAttribute="top" id="dDD-Le-pR9"/>
+                            <constraint firstItem="MDQ-TC-UYl" firstAttribute="trailing" secondItem="HXA-Mm-uKg" secondAttribute="trailing" id="qvs-Ih-vSr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZsB-8J-P1u"/>
+                    <connections>
+                        <outlet property="messageTextField" destination="zdQ-Rp-uNR" id="r51-w0-CMd"/>
+                        <outlet property="tableView" destination="MDQ-TC-UYl" id="5Jy-VD-yR1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fvH-Ug-gV7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4134.7826086956529" y="459.375"/>
+        </scene>
         <!--Navig-->
         <scene sceneID="Iz5-Xw-xNs">
             <objects>
@@ -571,12 +642,16 @@
         <image name="calendar.badge.plus" catalog="system" width="128" height="108"/>
         <image name="club" width="19" height="9"/>
         <image name="map" width="11" height="10"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="118"/>
         <image name="schedule" width="14" height="10"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
