@@ -63,7 +63,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="1nO-Yv-31f"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hd5-Yl-YUT">
                                                 <rect key="frame" x="0.0" y="50" width="374" height="1"/>
