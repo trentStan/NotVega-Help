@@ -19,6 +19,15 @@ class WeeklySchedule: UIViewController {
     var schedules: [Schedule] = []
     let cellSpacingHeight: CGFloat = 1
     
+    // Day buttons
+    
+    @IBOutlet var mon: UIButton!
+    @IBOutlet var tues: UIButton!
+    @IBOutlet var weds: UIButton!
+    @IBOutlet var thurs: UIButton!
+    @IBOutlet var fri: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,7 +79,11 @@ class WeeklySchedule: UIViewController {
         schedules = []
         
         if let button = sender as? UIButton {
-            
+            mon.backgroundColor = UIColor.clear
+            tues.backgroundColor = UIColor.clear
+            weds.backgroundColor = UIColor.clear
+            thurs.backgroundColor = UIColor.clear
+            fri.backgroundColor = UIColor.clear
             if button.isSelected {
                 button.backgroundColor = UIColor.clear
                 print("Not Selected")
