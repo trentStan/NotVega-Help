@@ -46,6 +46,12 @@ class WeeklySchedule: UIViewController {
 
         scheduleTableView.register(UINib(nibName: "WeeklySchedTableViewCell", bundle: nil), forCellReuseIdentifier: "WeeklyScheduleCell")
         
+        mon.backgroundColor = UIColor(red: 0.80, green: 0.91, blue: 0.80, alpha: 1.00)
+        mon.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4).cgColor
+        mon.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+        mon.layer.shadowOpacity = 0.2
+        mon.layer.shadowRadius = 1.0
+        mon.layer.cornerRadius = 10
         loadSchedules(day: "01")
     }
     
