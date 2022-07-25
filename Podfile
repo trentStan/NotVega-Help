@@ -9,4 +9,5 @@ target 'NotVega Help' do
 pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
 pod 'ReachabilitySwift'
+pod 'IQKeyboardManagerSwift'
 end

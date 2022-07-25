@@ -34,7 +34,6 @@
 		917E33C1288956A700B312C3 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917E33C0288956A700B312C3 /* ChatViewController.swift */; };
 		917E33C428895B9200B312C3 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917E33C228895B9200B312C3 /* MessageCell.swift */; };
 		917E33C528895B9200B312C3 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 917E33C328895B9200B312C3 /* MessageCell.xib */; };
-		91E1ACD1288A9CEE003944A7 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 91E1ACD0288A9CEE003944A7 /* IQKeyboardManagerSwift */; };
 		97D0E4239CD705AAA5B7AC68 /* Pods_NotVega_Help.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E35F28F1110CCF68B61A5AA /* Pods_NotVega_Help.framework */; };
 		DE779E70287F274F00E4A90E /* WeeklySchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE779E6F287F274F00E4A90E /* WeeklySchedule.swift */; };
 		DE779E72287F2DDF00E4A90E /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE779E71287F2DDF00E4A90E /* CalendarViewController.swift */; };
@@ -85,7 +84,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				97D0E4239CD705AAA5B7AC68 /* Pods_NotVega_Help.framework in Frameworks */,
-				91E1ACD1288A9CEE003944A7 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +206,6 @@
 			);
 			name = "NotVega Help";
 			packageProductDependencies = (
-				91E1ACD0288A9CEE003944A7 /* IQKeyboardManagerSwift */,
 			);
 			productName = "NotVega Help";
 			productReference = 1F574B1328608C6600E59550 /* NotVega Help.app */;
@@ -239,7 +236,6 @@
 			);
 			mainGroup = 1F574B0A28608C6600E59550;
 			packageReferences = (
-				91E1ACCF288A9CEE003944A7 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 1F574B1428608C6600E59550 /* Products */;
 			projectDirPath = "";
@@ -550,25 +546,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		91E1ACCF288A9CEE003944A7 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
-			requirement = {
-				kind = exactVersion;
-				version = 6.5.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		91E1ACD0288A9CEE003944A7 /* IQKeyboardManagerSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 91E1ACCF288A9CEE003944A7 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
-			productName = IQKeyboardManagerSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1F574B0B28608C6600E59550 /* Project object */;
 }
