@@ -89,6 +89,11 @@ class WeeklySchedule: UIViewController {
                 print("Not Selected")
             } else {
                 button.backgroundColor = UIColor(red: 0.80, green: 0.91, blue: 0.80, alpha: 1.00)
+                button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4).cgColor
+                button.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+                button.layer.shadowOpacity = 0.2
+                button.layer.shadowRadius = 1.0
+                button.layer.cornerRadius = 10
                 print("Selected")
             }
         }

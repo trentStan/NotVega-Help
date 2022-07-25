@@ -224,7 +224,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6m-94-bmR">
                                                 <rect key="frame" x="0.0" y="0.0" width="61" height="31"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Mon" cornerStyle="capsule"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Mon" cornerStyle="capsule">
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="weekdayPressed:" destination="bqs-eA-nMX" eventType="touchUpInside" id="vdJ-Ph-wkZ"/>
                                                 </connections>
@@ -232,7 +234,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ti-SH-0su">
                                                 <rect key="frame" x="83" y="0.0" width="61.5" height="31"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Tue"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Tue">
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="weekdayPressed:" destination="bqs-eA-nMX" eventType="touchUpInside" id="1ZL-QP-5hx"/>
                                                 </connections>
@@ -240,7 +244,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="on0-sv-Iow">
                                                 <rect key="frame" x="166.5" y="0.0" width="61" height="31"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Wed"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Wed">
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="weekdayPressed:" destination="bqs-eA-nMX" eventType="touchUpInside" id="nSY-VA-RVw"/>
                                                 </connections>
@@ -248,7 +254,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdl-lx-w6e">
                                                 <rect key="frame" x="249.5" y="0.0" width="61.5" height="31"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Thu"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Thu">
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="weekdayPressed:" destination="bqs-eA-nMX" eventType="touchUpInside" id="TUu-Ut-8pT"/>
                                                 </connections>
@@ -256,7 +264,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFC-Td-1cZ">
                                                 <rect key="frame" x="333" y="0.0" width="61" height="31"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Fri"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Fri">
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="weekdayPressed:" destination="bqs-eA-nMX" eventType="touchUpInside" id="7Vn-Ex-o1c"/>
                                                 </connections>
