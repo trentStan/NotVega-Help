@@ -28,19 +28,19 @@ class Main: UIViewController {
     var window: UIWindow?
     private let db = Firestore.firestore()
     
-    let monitor = NWPathMonitor()
+    //let monitor = NWPathMonitor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let parent = parent as! Navig
         window = parent.window
         
-        observeDisconnection()
+       // observeDisconnection()
         
         print("Main")
         addDefaults()
     }
-    
+        /*
     func observeDisconnection() {
         monitor.pathUpdateHandler = {
             path in
@@ -57,7 +57,8 @@ class Main: UIViewController {
         
         
     }
-    
+    */
+         
     func UIBuild(){
         //UI
         introText.text = "Welcome, \(getUserDefaults()?.name ?? "student")"

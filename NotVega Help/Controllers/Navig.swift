@@ -6,15 +6,35 @@
 //
 
 import UIKit
+import Network
 
 class Navig: UINavigationController {
-
+    
+    let monitor = NWPathMonitor()
+    
     var window: UIWindow?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        observeDisconnection()
         // Do any additional setup after loading the view.
     }
+    
+    func observeDisconnection() {
+        monitor.pathUpdateHandler = {
+            path in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+                if path.status == .unsatisfied {
+                    let newScene = SceneDelegate()
+                    newScene.window = self.window
+                    newScene.configureInitialRootViewController(for: self.window)
+                }
+            }
+        }
+        let queue = DispatchQueue(label: "Monitor")
+        monitor.start(queue: queue)
+        
+    }
+    
     
     /*
     // MARK: - Navigation
