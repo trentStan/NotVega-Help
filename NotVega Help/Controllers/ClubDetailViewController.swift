@@ -85,6 +85,10 @@ class ClubDetailViewController: UIViewController {
                 print("Successfully added")
             }
         }
+        
+        let alert = UIAlertController(title: "Added To Club", message: "Your Daily Schedule Has Been Updated", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true, completion: nil)
     }
     
     
