@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseAuth
+import Network
 
 class Main: UIViewController {
     
@@ -27,15 +28,34 @@ class Main: UIViewController {
     var window: UIWindow?
     private let db = Firestore.firestore()
     
-   
+    let monitor = NWPathMonitor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let parent = parent as! Navig
         window = parent.window
         
+        observeDisconnection()
+        
         print("Main")
         addDefaults()
+    }
+    
+    func observeDisconnection() {
+        monitor.pathUpdateHandler = {
+            path in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+                if path.status == .unsatisfied {
+                    let newScene = SceneDelegate()
+                    newScene.window = self.window
+                    newScene.configureInitialRootViewController(for: self.window)
+                }
+            }
+        }
+        let queue = DispatchQueue(label: "Monitor")
+        monitor.start(queue: queue)
+        
+        
     }
     
     func UIBuild(){
@@ -85,7 +105,7 @@ class Main: UIViewController {
         clubBtn.layer.shadowRadius = 1.0
     }
     
-   
+    
     @IBAction func signOut(_ sender: Any) {
         
         let newScene = SceneDelegate()
