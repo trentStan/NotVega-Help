@@ -23,11 +23,11 @@ class ClubDetailViewController: UIViewController {
     var cImage: String {
         switch cTitle {
         case "Gaming Club":
-            return "gaming.jpg"
+            return "gaming_club.jpg"
         case "Community Helpers Club":
-            return "community.jpg"
+            return "community_club.jpg"
         case "Debate Club":
-            return "debate.jpg"
+            return "debate_club.jpg"
         default:
             return ""
         }
