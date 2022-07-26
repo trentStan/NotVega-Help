@@ -19,7 +19,8 @@ class MessageCell: UITableViewCell {
         super.awakeFromNib()
         
         // To allow the message buble to be extendable
-        messageBuble.layer.cornerRadius = messageBuble.frame.size.height / 5
+        messageBuble.layer.cornerRadius = messageBuble.frame.size.height / 2
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
