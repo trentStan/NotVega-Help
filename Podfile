@@ -10,4 +10,5 @@ pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
 pod 'ReachabilitySwift'
 pod 'IQKeyboardManagerSwift'
+pod 'FSCalendar'
 end

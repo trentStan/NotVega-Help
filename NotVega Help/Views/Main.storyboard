@@ -318,21 +318,47 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="-823.66071428571422"/>
         </scene>
-        <!--Calendar View Controller-->
+        <!--Calendar-->
         <scene sceneID="IOR-SF-eXV">
             <objects>
                 <viewController id="lp7-H8-QwW" customClass="CalendarViewController" customModule="NotVega_Help" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9L0-X9-UfG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mtZ-e1-eos" customClass="FSCalendar">
+                                <rect key="frame" x="10" y="88" width="394" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Z0h-ey-CoA"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="X2l-EJ-I35">
+                                <rect key="frame" x="5" y="396" width="404" height="466"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7jw-Nc-RSe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7jw-Nc-RSe" firstAttribute="trailing" secondItem="mtZ-e1-eos" secondAttribute="trailing" constant="10" id="3IJ-KG-9Mw"/>
+                            <constraint firstItem="X2l-EJ-I35" firstAttribute="leading" secondItem="7jw-Nc-RSe" secondAttribute="leading" constant="5" id="3nU-r6-kfe"/>
+                            <constraint firstItem="mtZ-e1-eos" firstAttribute="top" secondItem="7jw-Nc-RSe" secondAttribute="top" id="WAb-Tq-2xJ"/>
+                            <constraint firstItem="X2l-EJ-I35" firstAttribute="top" secondItem="mtZ-e1-eos" secondAttribute="bottom" constant="8" symbolic="YES" id="Wfe-JY-C0R"/>
+                            <constraint firstItem="7jw-Nc-RSe" firstAttribute="trailing" secondItem="X2l-EJ-I35" secondAttribute="trailing" constant="5" id="a7K-J7-arI"/>
+                            <constraint firstItem="mtZ-e1-eos" firstAttribute="leading" secondItem="7jw-Nc-RSe" secondAttribute="leading" constant="10" id="m7h-TK-XzS"/>
+                            <constraint firstItem="7jw-Nc-RSe" firstAttribute="bottom" secondItem="X2l-EJ-I35" secondAttribute="bottom" id="xDz-EV-5Q6"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ErS-J8-mK9"/>
+                    <navigationItem key="navigationItem" title="Calendar" id="ErS-J8-mK9"/>
+                    <connections>
+                        <outlet property="calendar" destination="mtZ-e1-eos" id="p2Q-Ed-11h"/>
+                        <outlet property="eventsView" destination="X2l-EJ-I35" id="Lcr-xm-OxH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cez-Wx-7lk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2041" y="-391"/>
+            <point key="canvasLocation" x="2040.5797101449277" y="-391.07142857142856"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="MAE-3O-e25">

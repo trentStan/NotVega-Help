@@ -632,6 +632,7 @@ PODS:
     - "gRPC-C++ (~> 1.44.0)"
     - leveldb-library (~> 1.22)
     - nanopb (~> 2.30908.0)
+  - FSCalendar (2.8.4)
   - GoogleDataTransport (9.1.4):
     - GoogleUtilities/Environment (~> 7.7)
     - nanopb (< 2.30910.0, >= 2.30908.0)
@@ -722,6 +723,7 @@ PODS:
 DEPENDENCIES:
   - FirebaseAuth
   - FirebaseFirestore
+  - FSCalendar
   - IQKeyboardManagerSwift
   - ReachabilitySwift
 
@@ -734,6 +736,7 @@ SPEC REPOS:
     - FirebaseCoreDiagnostics
     - FirebaseCoreInternal
     - FirebaseFirestore
+    - FSCalendar
     - GoogleDataTransport
     - GoogleUtilities
     - "gRPC-C++"
@@ -754,6 +757,7 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnostics: 54410e5d156bf406a764c2722d9f77d682723b4c
   FirebaseCoreInternal: 5b8f4f2e2970a4cb9bd1cf7ada16c8ba69a29530
   FirebaseFirestore: 3ff0784d61f9a0faa3d67c5a8b1e4fb0b828c6b1
+  FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
   GoogleDataTransport: 5fffe35792f8b96ec8d6775f5eccd83c998d5a3b
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
   "gRPC-C++": 9675f953ace2b3de7c506039d77be1f2e77a8db2
@@ -766,6 +770,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
 
-PODFILE CHECKSUM: e966c4ec2858ac4995e87ef04699eb8ed350b2a1
+PODFILE CHECKSUM: a3dad0a66e1a6a1f436e0813aafb06a30f38d458
 
 COCOAPODS: 1.11.3
