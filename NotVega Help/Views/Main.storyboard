@@ -327,11 +327,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mtZ-e1-eos" customClass="FSCalendar">
-                                <rect key="frame" x="10" y="88" width="394" height="300"/>
+                                <rect key="frame" x="15" y="88" width="384" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="Z0h-ey-CoA"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
+                                        <color key="value" red="0.50196078430000002" green="0.63137254899999995" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
+                                        <color key="value" red="0.63529411759999999" green="0.24313725489999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="todaySelectionColor">
+                                        <color key="value" red="0.50196078430000002" green="0.63137254899999995" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleTextSize">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="weekdayTextSize">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="headerTitleTextSize">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useVeryShortWeekdaySymbols" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="X2l-EJ-I35">
                                 <rect key="frame" x="5" y="396" width="404" height="466"/>
@@ -341,12 +374,12 @@
                         <viewLayoutGuide key="safeArea" id="7jw-Nc-RSe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="7jw-Nc-RSe" firstAttribute="trailing" secondItem="mtZ-e1-eos" secondAttribute="trailing" constant="10" id="3IJ-KG-9Mw"/>
+                            <constraint firstItem="7jw-Nc-RSe" firstAttribute="trailing" secondItem="mtZ-e1-eos" secondAttribute="trailing" constant="15" id="3IJ-KG-9Mw"/>
                             <constraint firstItem="X2l-EJ-I35" firstAttribute="leading" secondItem="7jw-Nc-RSe" secondAttribute="leading" constant="5" id="3nU-r6-kfe"/>
                             <constraint firstItem="mtZ-e1-eos" firstAttribute="top" secondItem="7jw-Nc-RSe" secondAttribute="top" id="WAb-Tq-2xJ"/>
                             <constraint firstItem="X2l-EJ-I35" firstAttribute="top" secondItem="mtZ-e1-eos" secondAttribute="bottom" constant="8" symbolic="YES" id="Wfe-JY-C0R"/>
                             <constraint firstItem="7jw-Nc-RSe" firstAttribute="trailing" secondItem="X2l-EJ-I35" secondAttribute="trailing" constant="5" id="a7K-J7-arI"/>
-                            <constraint firstItem="mtZ-e1-eos" firstAttribute="leading" secondItem="7jw-Nc-RSe" secondAttribute="leading" constant="10" id="m7h-TK-XzS"/>
+                            <constraint firstItem="mtZ-e1-eos" firstAttribute="leading" secondItem="7jw-Nc-RSe" secondAttribute="leading" constant="15" id="m7h-TK-XzS"/>
                             <constraint firstItem="7jw-Nc-RSe" firstAttribute="bottom" secondItem="X2l-EJ-I35" secondAttribute="bottom" id="xDz-EV-5Q6"/>
                         </constraints>
                     </view>

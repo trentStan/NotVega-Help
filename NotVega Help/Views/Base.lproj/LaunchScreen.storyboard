@@ -25,6 +25,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchColors" translatesAutoresizingMaskIntoConstraints="NO" id="Ubg-GZ-gAi">
+                                <rect key="frame" x="87" y="544" width="240" height="352"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -32,10 +35,14 @@
                             <constraint firstItem="hdq-CQ-pDS" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="04D-zo-adj"/>
                             <constraint firstItem="lhM-9a-VyD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="0ik-cT-i7j"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hdq-CQ-pDS" secondAttribute="bottom" constant="326" id="5a6-ib-ggR"/>
+                            <constraint firstItem="Ubg-GZ-gAi" firstAttribute="centerX" secondItem="lhM-9a-VyD" secondAttribute="centerX" id="9xJ-YA-G5K"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lhM-9a-VyD" secondAttribute="bottom" constant="308" id="JLL-2J-Y9l"/>
+                            <constraint firstItem="Ubg-GZ-gAi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="Tzp-Cx-RBs"/>
                             <constraint firstItem="lhM-9a-VyD" firstAttribute="centerX" secondItem="hdq-CQ-pDS" secondAttribute="centerX" id="fpH-fw-yyI"/>
                             <constraint firstItem="hdq-CQ-pDS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="189" id="jjD-Fx-dAO"/>
                             <constraint firstItem="lhM-9a-VyD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="454" id="nFi-IP-oJw"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Ubg-GZ-gAi" secondAttribute="bottom" constant="-34" id="ybw-QA-zhj"/>
+                            <constraint firstItem="Ubg-GZ-gAi" firstAttribute="top" secondItem="hdq-CQ-pDS" secondAttribute="bottom" constant="8" id="yzh-eI-rFr"/>
                             <constraint firstItem="hdq-CQ-pDS" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="z27-qH-vDu"/>
                         </constraints>
                     </view>
@@ -46,6 +53,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="launchColors" width="1600" height="1112"/>
         <image name="notvegalogowithslogan" width="1080" height="765"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

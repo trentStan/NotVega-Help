@@ -99,11 +99,12 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="5iC-q5-C2l"/>
                                                 </constraints>
-                                                <color key="tintColor" red="0.090196078431372548" green="0.16862745098039217" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                                 <size key="titleShadowOffset" width="0.0" height="8"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Login" cornerStyle="capsule" titleAlignment="trailing">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" red="0.090196078430000007" green="0.16862745100000001" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="logIn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="w9c-0K-dX5"/>
@@ -119,12 +120,21 @@
                                     <constraint firstAttribute="width" secondItem="jJL-nj-KTe" secondAttribute="height" multiplier="187:149" id="ZLa-vu-bqM"/>
                                 </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notvegalogo" translatesAutoresizingMaskIntoConstraints="NO" id="37Y-Yh-Yag">
+                                <rect key="frame" x="299" y="52" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ryl-PJ-Pqo"/>
+                                    <constraint firstAttribute="width" constant="100" id="zpB-5t-poc"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jJL-nj-KTe" firstAttribute="top" secondItem="nAd-tz-9O5" secondAttribute="bottom" constant="50" id="9CX-I9-vjW"/>
+                            <constraint firstItem="37Y-Yh-Yag" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="299" id="9uX-H9-KEX"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nAd-tz-9O5" secondAttribute="trailing" constant="20" id="D0o-Gi-ObG"/>
+                            <constraint firstItem="37Y-Yh-Yag" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="OlD-sn-QxA"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jJL-nj-KTe" secondAttribute="trailing" constant="20" id="WJJ-Wl-HnM"/>
                             <constraint firstAttribute="trailing" secondItem="nAd-tz-9O5" secondAttribute="trailing" constant="20" id="eB1-44-Umr"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nAd-tz-9O5" secondAttribute="trailing" constant="20" id="eDp-rb-TDU"/>
@@ -145,6 +155,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="notvegalogo" width="1080" height="765"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
