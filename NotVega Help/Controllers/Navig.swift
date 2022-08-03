@@ -7,6 +7,7 @@
 
 import UIKit
 import Network
+import Reachability
 
 class Navig: UINavigationController {
     
@@ -23,11 +24,24 @@ class Navig: UINavigationController {
         monitor.pathUpdateHandler = {
             path in
             DispatchQueue.main.asyncAfter(deadline: .now() + 1){
-                if path.status == .unsatisfied {
-                    let newScene = SceneDelegate()
-                    newScene.window = self.window
-                    newScene.configureInitialRootViewController(for: self.window)
+                
+                /* let newScene = SceneDelegate()
+                 newScene.window = self.window
+                 newScene.configureInitialRootViewController(for: self.window) */
+                let reachability = try! Reachability()
+                switch reachability.connection {
+                case .unavailable:
+                    print("Network not reachable")
+                    let errorViewController = UIStoryboard(name: "NoInternet", bundle: nil).instantiateViewController(withIdentifier: "NoInternet") as! NoInternet
+                    errorViewController.window = self.window
+                    self.window?.rootViewController = errorViewController
+                    self.window?.makeKeyAndVisible()
+                    return
+                default:
+                    print ("")
+                    
                 }
+                
             }
         }
         let queue = DispatchQueue(label: "Monitor")
@@ -37,13 +51,13 @@ class Navig: UINavigationController {
     
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
