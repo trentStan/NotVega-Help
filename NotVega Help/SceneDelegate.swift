@@ -9,11 +9,12 @@ import UIKit
 import FirebaseAuth
 import Reachability
 import FirebaseFirestore
+import Network
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    
+    let monitor = NWPathMonitor()
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -55,6 +56,36 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
 }
 extension SceneDelegate {
+    
+    func observeDisconnection() {
+        monitor.pathUpdateHandler = {
+            path in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+                
+                /* let newScene = SceneDelegate()
+                 newScene.window = self.window
+                 newScene.configureInitialRootViewController(for: self.window) */
+                let reachability = try! Reachability()
+                switch reachability.connection {
+                case .unavailable:
+                    print("Network not reachable")
+                    let errorViewController = UIStoryboard(name: "NoInternet", bundle: nil).instantiateViewController(withIdentifier: "NoInternet") as! NoInternet
+                    errorViewController.window = self.window
+                    self.window?.rootViewController = errorViewController
+                    self.window?.makeKeyAndVisible()
+                    return
+                default:
+                    print ("")
+                    
+                }
+                
+            }
+        }
+        let queue = DispatchQueue(label: "Monitor")
+        monitor.start(queue: queue)
+        
+    }
+    
     func configureInitialRootViewController(for window: UIWindow?) {
         
         let reachability = try! Reachability()
@@ -73,6 +104,8 @@ extension SceneDelegate {
             print ("")
             
         }
+        
+        observeDisconnection()
         
         if let loggedEmail = Auth.auth().currentUser?.email, let defaultEmail = UserDefaults.standard.string(forKey: "Email"), let id = UserDefaults.standard.string(forKey: "ID"){
            print(loggedEmail)
